@@ -28,3 +28,6 @@ header a:hover{
     border-radius: 30px;
     transform: scale(1.05);
 }
+.h1{
+    font-size: 100vw;
+}

@@ -2,7 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-color:#f6eee3;
+    background-color:#1e1e2e;
     font-family: Arial, sans-serif;
 }
 /* ------------------- Navigation Bar ------------------- */
@@ -94,7 +94,7 @@ body{
     font-weight: bolder;
     font-size: 4vw;
     font-family: "Comfortaa", sans-serif;
-    color: #333;
+    color: #cba6f7;
     align-self: first baseline;
 }
 
@@ -102,6 +102,7 @@ body{
     position:relative;
     top: -5vh;
     font-size: 3vw;
+    color: #cba6f7;
 }
 .greeting strong{
     font-size: 150%;
@@ -111,7 +112,7 @@ body{
     font-weight: bold;
     font-size: 2vw;
     font-family: "Comfortaa", sans-serif;
-    color: #333;
+    color: #cba6f7;
     margin-left: 4vw;
 }
 .introStack{
@@ -156,8 +157,8 @@ body{
     display: flex;
     align-items: center;
     gap: 8px; 
-    background-color: #666;
-    color: white;
+    background-color: #181825;
+    color: #cbd3f2;
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 1vw;
@@ -193,13 +194,14 @@ body{
 }
 .sectionHeader h1{
     font-size: 4vw;
-    color: #333;
+    color: #cba6f7;
     margin-bottom: 2vw; 
 }
 .sectionHeader p{
     position:relative;
     top:-2vw;
     left:0.50vw;
+    color:#cbd3f2;
 }
 
 /* ------------------- Certifications ------------------- */
@@ -218,6 +220,9 @@ body{
     width: 25%;
     border-radius: 15px;
 }
+.certification h3{
+    color:#cbd3f2;
+}
 .certags{
     position:relative;
     top:-0.75vh;
@@ -225,9 +230,9 @@ body{
 }
 .certag{
     text-align: center;
-    background-color: #888;
+    background-color: #181825;
     border-radius: 15px;
-    color: white;    
+    color: #cbd3f2;    
     padding: 0.25vw 0.5vw 0.25vw 0.5vw;
 }
 .cert:hover{
@@ -248,8 +253,7 @@ body{
 
 .projectCard {
     flex: 0 0 auto; 
-    background-color: white;
-    border: 1px solid #ddd;
+    background-color: #181825;
     border-radius: 20px;
     overflow: hidden;
     width: 22%;
@@ -272,13 +276,13 @@ body{
 }
 
 .projectCard h2 {
-    color: #333;
+    color: #cbd3f2;
     font-size: 1.5em;
 
 }
 
 .projectCard p {
-    color: #666;
+    color: #cbd3f2;
     font-size: 1em;
 
 }
@@ -311,8 +315,8 @@ body{
     display: flex;
     align-items: center;
     gap: 8px; 
-    background-color: #666;
-    color: white;
+    background-color: #1e1e2e;
+    color: #cbd3f2;
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.8rem;

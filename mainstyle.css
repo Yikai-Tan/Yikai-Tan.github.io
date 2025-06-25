@@ -1,0 +1,325 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color:#f6eee3;
+    font-family: Arial, sans-serif;
+}
+/* ------------------- Navigation Bar ------------------- */
+.nav{
+    position:fixed;
+}
+.nav summary{
+    list-style: none;
+}
+
+.navSummary img{
+    width:3vw;
+    height:3vw;
+    background-color: #888;
+    border-radius: 20px;
+    margin: 0.25vw 0.25vw 0.25vw 0.25vw;
+}
+.navDetails:open{
+    background-color: #888;
+    border-radius: 20px;
+    width: 15vw;
+}
+
+.navItems{
+    list-style: none;
+}
+.navItems img{
+    width: 3.5vw;
+    height: 3.5vw;
+    margin: 0.25vw 0.25vw 0.25vw 0.25vw;
+}
+.navItems{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+.navUi{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap:1.5vw;
+}
+.navUi p{
+    position: relative;
+    top:0.75vw;
+    font-size: 1vw;
+    font-weight: bold;
+}
+.navUi:hover{
+    width: 15vw;
+    border-radius: 20px;
+    background-color: #333;
+    transition: 0.3s;
+}
+/* ------------------- Main Intro w/o tTags ------------------- */
+
+.intro{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.memojiGreeting{
+    margin-top: 18vh;
+    list-style: none;
+    justify-content: center;
+    justify-self: auto;
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+}
+.memojiGreeting img{
+    margin-left: 3vw;
+    position: relative;
+    top: 10vh;
+    width: 15vw;
+    height: 15vw;
+}
+.greeting{
+    list-style: none;
+    justify-content: first baseline;
+    justify-self: auto;
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    margin-left: 4vw;
+}
+.greeting h1{
+    font-weight: bolder;
+    font-size: 4vw;
+    font-family: "Comfortaa", sans-serif;
+    color: #333;
+    align-self: first baseline;
+}
+
+.greeting p{
+    position:relative;
+    top: -5vh;
+    font-size: 3vw;
+}
+.greeting strong{
+    font-size: 150%;
+}
+
+.intro h2 {
+    font-weight: bold;
+    font-size: 2vw;
+    font-family: "Comfortaa", sans-serif;
+    color: #333;
+    margin-left: 4vw;
+}
+.introStack{
+    position: relative;
+    left:18vw;
+    top:-5vh;
+    list-style: none;
+    justify-content: center;
+    justify-self: auto;
+    align-self: first baseline;
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+    gap: 50px
+    
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: left;
+    flex-direction: row;
+    gap: 50px;
+    position: relative;
+    top:1.75vw;
+}
+.socialbutton:hover{
+    transform: scale(1.25);
+    transition: 300ms;
+}
+
+/* ------------------- Technology Tags -------------------*/
+.ttags {
+    position:relative;
+    top: -26vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ttag {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    background-color: #666;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 1vw;
+    transition: background-color 0.3s;
+}
+
+.ttag img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ttag:hover {
+    background-color: #888;
+    transform: scale(1.05);
+}
+
+/* ------------------- Downward Arrow ------------------- */
+
+.arrow img{
+    width:10vw;
+    height:3vw;
+}
+.arrow{
+    position:relative;
+    top:-10vw;
+    justify-self: center;
+}
+/* ------------------- Section Headder Sections ------------------- */
+.sectionHeader{
+    margin-left: 4vw;
+    margin-right: 4vw;
+    text-align: first baseline;
+}
+.sectionHeader h1{
+    font-size: 4vw;
+    color: #333;
+    margin-bottom: 2vw; 
+}
+.sectionHeader p{
+    position:relative;
+    top:-2vw;
+    left:0.50vw;
+}
+
+/* ------------------- Certifications ------------------- */
+.certification{
+    margin-left:5vw;
+    margin-right:5vw;
+    position:relative;
+    top:-2vw;
+    display: flex;
+    flex-wrap: wrap;
+    padding:0.25vw 0.5vw 0.25vw 0.5vw;
+}
+.cert{
+    font-size: 0.95vw;
+    text-align: center;
+    width: 25%;
+    border-radius: 15px;
+}
+.certags{
+    position:relative;
+    top:-0.75vh;
+    justify-self: center;
+}
+.certag{
+    text-align: center;
+    background-color: #888;
+    border-radius: 15px;
+    color: white;    
+    padding: 0.25vw 0.5vw 0.25vw 0.5vw;
+}
+.cert:hover{
+    background-color: #888;
+    color: white;
+    border-radius: 15px;
+    transition-duration: 0.3s;
+}
+
+/* ------------------- Cards for Projects -------------------*/
+.projects {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+     /* Enable horizontal scrolling if needed */
+    margin-top: 1vw; 
+}
+
+.projectCard {
+    flex: 0 0 auto; 
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 22%;
+    text-align: center;
+    margin: 0.25vw 0.5vw 0.25vw 0.5vw;
+    gap:0.5vw;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projectCard:hover {
+    transform: scale(1.025);
+    transition: transform 0.3s;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.projectCard img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.projectCard h2 {
+    color: #333;
+    font-size: 1.5em;
+
+}
+
+.projectCard p {
+    color: #666;
+    font-size: 1em;
+
+}
+
+.projects summary{
+    list-style: none;
+    margin: 0.25vw 0.5vw 0.25vw 0.5vw;
+}
+
+.projectCard:open{
+    width:90vw;
+    height:90vh;
+}
+.projectCard:open summary{
+    text-align: left;
+    
+}
+.projectSummary a{
+    text-decoration: none;
+}
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.tag {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    background-color: #666;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s;
+}
+
+.tag:hover {
+    background-color: #888;
+}
+

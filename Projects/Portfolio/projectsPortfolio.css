@@ -1,0 +1,33 @@
+/* ------------------- linker back to main page -------------------*/
+header{
+    border-radius: 30px;
+    background-color: #666;
+    width: fit-content;
+    min-width: 12vw;
+}
+header a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5vw;
+    color:white;
+    text-decoration: none;
+    width:100%
+}
+header p{
+    position: relative;
+    font-size: 2vh;
+    font-weight: blod;
+}
+header img{
+    position: relative;
+    top:25%;
+}
+header a:hover{
+    background-color: aquamarine;
+    border-radius: 30px;
+    transform: scale(1.05);
+}
+.h1{
+    font-size: 100vw;
+}

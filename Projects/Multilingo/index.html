@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiLingo Project - Yikai Tan</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../CSS/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="glass-navbar" id="glassNavbar">
+        <button class="hamburger-btn" id="hamburgerBtn">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </button>
+        
+        <div class="nav-menu" id="navMenu">
+            <div class="nav-item">
+                <a href="../../index.html" class="nav-link">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#certifications" class="nav-link">Certifications</a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#projects" class="nav-link">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <div class="container-fluid hero-section" style="min-height: auto; padding-top: 60px;">
+        <div class="container">
+            <!-- Project Header -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-5 glass-hover">
+                <h1 class="section-title text-center mb-2">MultiLingo</h1>
+                <p class="section-subtitle text-center mb-4">Breaking Language Barriers with AI</p>
+                
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="../projectPictures/Multilingo/MultilingoOneSlide.jpeg" alt="MultiLingo Project" class="img-fluid rounded-3" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="project-title mb-3">Project Context</h3>
+                        <p class="project-description mb-4">MultiLingo strives to break the language barriers that we have today between people. Using the industry's most trusted and pioneer model from Open AI, Chat GPT 3.5, we made an application that translates language to language and teaches users simple phrases to simplify the travelling process.</p>
+                        
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="project-tag badge rounded-pill px-3 py-2">Python</span>
+                            <span class="project-tag badge rounded-pill px-3 py-2">OpenAI GPT-3.5</span>
+                            <span class="project-tag badge rounded-pill px-3 py-2">Streamlit</span>
+                            <span class="project-tag badge rounded-pill px-3 py-2">Natural Language Processing</span>
+                        </div>
+                        
+                        <div class="d-flex gap-3">
+                            <a href="https://sites.google.com/sst.edu.sg/cp-coursework-gallery/2024/multilingo" target="_blank" class="tech-tag badge rounded-pill px-3 py-2 text-decoration-none">
+                                <i class="fas fa-external-link-alt me-2"></i>Find Out More
+                            </a>
+                            <a href="https://github.com/Tophat-Guy99/MultiLingo" target="_blank" class="tech-tag badge rounded-pill px-3 py-2 text-decoration-none">
+                                <i class="fab fa-github me-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Reflection -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-5 glass-hover">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                        <img src="../projectPictures/Multilingo/MultilingoMainPhoto.JPG" alt="Project Development" class="img-fluid rounded-3" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h3 class="project-title mb-3">Reflection</h3>
+                        <p class="project-description mb-4">From this project, I learned how to tap into Large Language Models (LLMs) and harness their strengths in language processing. In this process, I also learned how to create a bash file for users to install the required libraries for the application to run. My group and I encountered various issues during the project, such as the LLM generating gibberish or incorrect outputs. However, we persevered through this hardship, refining our code and prompts to achieve the desired results. This project strengthened the bonds between my group mates and me.</p>
+                        
+                        <h4 class="project-title mb-3" style="font-size: 1.3rem;">Key Learning Points</h4>
+                        <ul class="project-description" style="list-style: none; padding-left: 0;">
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>How to tap into AI models with Python</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>How to use Streamlit to make an interface</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>How to write a bash file</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Projects Button -->
+            <div class="text-center mb-5">
+                <a href="../../index.html#projects" class="tech-tag badge rounded-pill px-4 py-3 text-decoration-none" style="font-size: 1rem;">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for navbar functionality -->
+    <script src="../../JS/navbar.js"></script>
+</body>
+</html>

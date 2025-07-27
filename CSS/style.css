@@ -226,10 +226,11 @@ body {
     justify-content: center;
 }
 
-.memoji-img {
+.me-img {
     width: 200px;
-    height: 200px;
+    height: auto;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .greeting-text {

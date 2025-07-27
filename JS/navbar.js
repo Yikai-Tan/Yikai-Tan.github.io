@@ -40,13 +40,25 @@ document.addEventListener('keydown', function(event) {
 // Add smooth scroll effect for nav links
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // Get the target section
         const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
         
-        // Close menu after clicking a link
+        // Only prevent default for internal anchors (starting with #)
+        if (targetId.startsWith('#')) {
+            e.preventDefault();
+            
+            // Get the target section
+            const targetSection = document.querySelector(targetId);
+            
+            // Smooth scroll to target section if it exists
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+        
+        // Close menu after clicking a link (for both internal and external links)
         isMenuOpen = false;
         hamburgerBtn.classList.remove('active');
         navMenu.classList.remove('active');
@@ -57,14 +69,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
         setTimeout(() => {
             this.style.transform = '';
         }, 150);
-        
-        // Smooth scroll to target section if it exists
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
     });
 });
 

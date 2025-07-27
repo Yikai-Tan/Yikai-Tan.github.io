@@ -1,20 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio V1 Project - Yikai Tan</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="./projectsPortfolio.css">
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../CSS/style.css">
 </head>
 <body>
-    <!-- -------------------linker back to main page ------------------- -->
-    <header class="nav">
-        <a href="../../index.html">
-            <img src="../../mainPagePictures/navBar/home.svg">
-            <p>Home</p>
-        </a>
-    </header>
-    <h1>This Page is Currently Under Construction</h1>
+    <!-- Navigation Bar -->
+    <nav class="glass-navbar" id="glassNavbar">
+        <button class="hamburger-btn" id="hamburgerBtn">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </button>
+        
+        <div class="nav-menu" id="navMenu">
+            <div class="nav-item">
+                <a href="../../index.html" class="nav-link">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#certifications" class="nav-link">Certifications</a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#projects" class="nav-link">Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <div class="container-fluid hero-section" style="min-height: auto; padding-top: 80px;">
+        <div class="container">
+            <!-- Project Header -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-5 glass-hover">
+                <h1 class="section-title text-center mb-2">Portfolio 1.0</h1>
+                <p class="section-subtitle text-center mb-4">Learning Web Development Through Practice</p>
+                
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <img src="../projectPictures/PortfolioV1/PortfolioV1Main.png" alt="Portfolio Project" class="img-fluid rounded-3" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="project-title mb-3">Aim of this Project</h3>
+                        <p class="project-description mb-4">Creating this website motivated me to learn how to make an HTML website, use CSS to style a website and learn how to use industry tools like GitHub to host the website by using AI and online resources to learn how to set up a website with HTML and CSS.</p>
+                        
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="project-tag badge rounded-pill px-3 py-2">HTML</span>
+                            <span class="project-tag badge rounded-pill px-3 py-2">CSS</span>
+                            <span class="project-tag badge rounded-pill px-3 py-2">JavaScript</span>
+                            <span class="project-tag badge rounded-pill px-3 py-2">GitHub Pages</span>
+                        </div>
+                        
+                        <div class="d-flex gap-3">
+                            <a href="https://github.com/yikai-tan/yikai-tan.github.io" target="_blank" class="tech-tag badge rounded-pill px-3 py-2 text-decoration-none">
+                                <i class="fab fa-github me-2"></i>GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Reflection -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-5 glass-hover">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                        <img src="../projectPictures/PortfolioV1/PortfolioCodeIndex.png" alt="Project Development" class="img-fluid rounded-3" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <h3 class="project-title mb-3">What I Learned</h3>
+                        <p class="project-description mb-4">I learned the basics of HTML and how to create and colour a webpage using a CSS file to reference a webpage as a stylesheet. Using AI to constantly refine my code, I improved my prompt crafting skills to prompt AI better, explain better, and give me examples of how to do a particular task in HTML and/or CSS. This allowed me to learn faster and allowed me to create this portfolio.</p>
+                        
+                        <h4 class="project-title mb-3" style="font-size: 1.3rem;">Key Learning Points</h4>
+                        <ul class="project-description" style="list-style: none; padding-left: 0;">
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>How HTML works</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>How to use CSS as a style sheet for HTML</li>
+                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>How to harness AI models to improve</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Projects Button -->
+            <div class="text-center mb-5">
+                <a href="../../index.html#projects" class="tech-tag badge rounded-pill px-4 py-3 text-decoration-none" style="font-size: 1rem;">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for navbar functionality -->
+    <script src="../../JS/navbar.js"></script>
 </body>
 </html>

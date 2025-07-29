@@ -31,7 +31,6 @@ body {
         0 8px 32px rgba(0, 0, 0, 0.1),
         inset 0 1px 0 rgba(255, 255, 255, 0.1),
         inset 0 -1px 0 rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-dark {
@@ -42,7 +41,6 @@ body {
         0 8px 32px rgba(0, 0, 0, 0.15),
         inset 0 1px 0 rgba(255, 255, 255, 0.08),
         inset 0 -1px 0 rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Enhanced glass hover effect */
@@ -333,7 +331,6 @@ body {
     color: #cbd3f2;
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     line-height: 1.5;
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .cert-card h3 {
@@ -382,7 +379,6 @@ body {
         inset 0 1px 0 rgba(255, 255, 255, 0.08),
         inset 0 -1px 0 rgba(255, 255, 255, 0.03);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 1px solid rgba(255, 255, 255, 0.05);
     position: relative;
 }
 
@@ -480,7 +476,6 @@ body {
     color: #cbd3f2;
     font-size: 0.8rem;
     font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .project-stats {
@@ -748,7 +743,6 @@ body {
         inset 0 1px 0 rgba(255, 255, 255, 0.08),
         inset 0 -1px 0 rgba(255, 255, 255, 0.03);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .contact-link:hover {
@@ -761,7 +755,6 @@ body {
 
 .contact-email-highlight {
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(203, 166, 247, 0.2);
 }
 
 .email-link-prominent {
@@ -825,7 +818,6 @@ footer {
         0 20px 60px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.2),
         inset 0 -1px 0 rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
 }
 
@@ -875,7 +867,6 @@ footer {
     padding: 10px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .social-dock-item:hover {
@@ -1023,7 +1014,6 @@ footer {
         0 8px 32px rgba(0, 0, 0, 0.1),
         inset 0 1px 0 rgba(255, 255, 255, 0.1),
         inset 0 -1px 0 rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .progress-indicator {
@@ -1038,7 +1028,6 @@ footer {
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     cursor: pointer;
     pointer-events: all;
-    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .progress-indicator i {
@@ -1049,7 +1038,6 @@ footer {
 
 .progress-indicator.active {
     background: rgba(203, 166, 247, 0.2);
-    border-color: #cba6f7;
     box-shadow: 
         0 8px 25px rgba(203, 166, 247, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);
@@ -1062,7 +1050,6 @@ footer {
 
 .progress-indicator.completed {
     background: rgba(129, 199, 132, 0.2);
-    border-color: #81c784;
     box-shadow: 
         0 8px 25px rgba(129, 199, 132, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.2);

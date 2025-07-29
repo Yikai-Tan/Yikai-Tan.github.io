@@ -72,8 +72,8 @@ body {
         0 8px 32px rgba(0, 0, 0, 0.1),
         inset 0 1px 0 rgba(255, 255, 255, 0.1),
         inset 0 -1px 0 rgba(255, 255, 255, 0.05);
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow: visible;
+    transition: all 0.5s ease;
+    overflow: hidden;
     width: 70px;
     height: 70px;
     display: flex;
@@ -92,12 +92,12 @@ body {
     max-height: 580px; /* Set max height to prevent overflow */
     align-items: flex-start;
     overflow: hidden; /* Prevent background expansion */
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s ease;
 }
 
 /* Enhanced closing animation */
 .glass-navbar:not(.expanded) {
-    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s ease;
 }
 
 .hamburger-btn {
@@ -147,9 +147,7 @@ body {
     opacity: 0;
     visibility: hidden;
     max-height: 0;
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
-                visibility 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
-                max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s ease;
     margin-top: 10px;
 }
 
@@ -157,17 +155,14 @@ body {
     opacity: 1;
     visibility: visible;
     max-height: 500px; /* Increased height for all navigation items */
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-                visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-                max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s ease;
 }
 
 .nav-item {
     margin: 15px 0;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), 
-                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s ease;
 }
 
 .nav-menu.active .nav-item {
@@ -181,13 +176,17 @@ body {
 .nav-menu.active .nav-item:nth-child(4) { transition-delay: 0.4s; }
 .nav-menu.active .nav-item:nth-child(5) { transition-delay: 0.5s; }
 .nav-menu.active .nav-item:nth-child(6) { transition-delay: 0.6s; }
+.nav-menu.active .nav-item:nth-child(7) { transition-delay: 0.7s; }
+.nav-menu.active .nav-item:nth-child(8) { transition-delay: 0.8s; }
 
-.nav-menu:not(.active) .nav-item:nth-child(1) { transition-delay: 0s; }
-.nav-menu:not(.active) .nav-item:nth-child(2) { transition-delay: 0s; }
-.nav-menu:not(.active) .nav-item:nth-child(3) { transition-delay: 0s; }
-.nav-menu:not(.active) .nav-item:nth-child(4) { transition-delay: 0s; }
-.nav-menu:not(.active) .nav-item:nth-child(5) { transition-delay: 0s; }
-.nav-menu:not(.active) .nav-item:nth-child(6) { transition-delay: 0s; }
+.nav-menu:not(.active) .nav-item:nth-child(8) { transition-delay: 0s; }
+.nav-menu:not(.active) .nav-item:nth-child(7) { transition-delay: 0.1s; }
+.nav-menu:not(.active) .nav-item:nth-child(6) { transition-delay: 0.2s; }
+.nav-menu:not(.active) .nav-item:nth-child(5) { transition-delay: 0.3s; }
+.nav-menu:not(.active) .nav-item:nth-child(4) { transition-delay: 0.4s; }
+.nav-menu:not(.active) .nav-item:nth-child(3) { transition-delay: 0.5s; }
+.nav-menu:not(.active) .nav-item:nth-child(2) { transition-delay: 0.6s; }
+.nav-menu:not(.active) .nav-item:nth-child(1) { transition-delay: 0.7s; }
 
 .nav-link {
     color: rgba(255, 255, 255, 0.9);

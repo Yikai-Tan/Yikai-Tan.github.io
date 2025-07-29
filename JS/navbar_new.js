@@ -70,63 +70,24 @@ document.querySelectorAll('.nav-link').forEach(link => {
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('div[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    const progressIndicators = document.querySelectorAll('.progress-indicator');
     
     let current = '';
-    let currentIndex = -1;
     
-    sections.forEach((section, index) => {
+    sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
-            currentIndex = index;
         }
     });
     
-    // Update navbar links
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
             link.classList.add('active');
         }
     });
-    
-    // Update progress indicators
-    progressIndicators.forEach((indicator, index) => {
-        const sectionId = indicator.getAttribute('data-section');
-        indicator.classList.remove('active', 'completed');
-        
-        if (sectionId === current) {
-            indicator.classList.add('active');
-        } else {
-            // Check if this section is above the current section
-            const sectionElement = document.getElementById(sectionId);
-            if (sectionElement && sectionElement.offsetTop < pageYOffset + 200) {
-                indicator.classList.add('completed');
-            }
-        }
-    });
 }
-
-// Add click functionality to progress indicators
-document.addEventListener('DOMContentLoaded', () => {
-    const progressIndicators = document.querySelectorAll('.progress-indicator');
-    
-    progressIndicators.forEach(indicator => {
-        indicator.addEventListener('click', function() {
-            const sectionId = this.getAttribute('data-section');
-            const targetSection = document.getElementById(sectionId);
-            
-            if (targetSection) {
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-});
 
 // Listen for scroll events
 window.addEventListener('scroll', updateActiveNavLink);

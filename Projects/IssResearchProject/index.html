@@ -9,14 +9,106 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../CSS/style.css">
+    
+    <!-- Floating particles background -->
+    <style>
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(203, 166, 247, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+        }
+        
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 6s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 8s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 10s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 12s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 14s; }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-10vh) rotate(180deg);
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Floating particles background -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Project Navigation Bar -->
+    <div class="progress-bar-container">
+        <div class="progress-bar-track">
+            <div class="progress-indicator" data-section="home">
+                <a href="../../index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-home"></i>
+                    <span class="progress-label">Home</span>
+                </a>
+            </div>
+            <div class="progress-indicator" data-section="portfolio2">
+                <a href="../Portfolio2/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-rocket"></i>
+                    <span class="progress-label">Portfolio 2.0</span>
+                </a>
+            </div>
+            <div class="progress-indicator" data-section="portfolio1">
+                <a href="../Portfolio/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-laptop-code"></i>
+                    <span class="progress-label">Portfolio 1.0</span>
+                </a>
+            </div>
+            <div class="progress-indicator" data-section="multilingo">
+                <a href="../Multilingo/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-language"></i>
+                    <span class="progress-label">MultiLingo</span>
+                </a>
+            </div>
+            <div class="progress-indicator active" data-section="iss">
+                <a href="../IssResearchProject/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-flask"></i>
+                    <span class="progress-label">ISS Research</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation Bar -->
     <nav class="glass-navbar" id="glassNavbar">
         <button class="hamburger-btn" id="hamburgerBtn">
@@ -27,83 +119,199 @@
         
         <div class="nav-menu" id="navMenu">
             <div class="nav-item">
-                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="../../index.html" class="nav-link">
+                    <i class="fas fa-home me-2"></i>Home
+                </a>
             </div>
             <div class="nav-item">
-                <a href="../../index.html#certifications" class="nav-link">Certifications</a>
+                <a href="../../index.html#about" class="nav-link">
+                    <i class="fas fa-user me-2"></i>About
+                </a>
             </div>
             <div class="nav-item">
-                <a href="../../index.html#projects" class="nav-link">Projects</a>
+                <a href="../../index.html#education" class="nav-link">
+                    <i class="fas fa-graduation-cap me-2"></i>Education
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#certifications" class="nav-link">
+                    <i class="fas fa-certificate me-2"></i>Certifications
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#projects" class="nav-link">
+                    <i class="fas fa-code me-2"></i>Projects
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#competitions" class="nav-link">
+                    <i class="fas fa-trophy me-2"></i>Competitions
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#service" class="nav-link">
+                    <i class="fas fa-heart me-2"></i>Community
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#contact" class="nav-link">
+                    <i class="fas fa-envelope me-2"></i>Contact
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- Project Content -->
-    <div class="container-fluid hero-section" style="min-height: auto; padding-top: 80px;">
+    <div class="container-fluid hero-section" style="min-height: auto; padding-top: 60px;">
         <div class="container">
+            <!-- Back Button -->
+            <div class="mb-4">
+                <a href="../../index.html#projects" class="glass p-3 rounded-3 text-decoration-none d-inline-flex align-items-center glass-hover" style="color: #cba6f7;">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                </a>
+            </div>
+
             <!-- Project Header -->
-            <div class="glass rounded-4 p-4 p-md-5 mb-5 glass-hover">
-            <h1 class="section-title text-center mb-2">ISS Science Research Project</h1>
-            <p class="section-subtitle text-center mb-4">Investigating Salt Concentration Effects on Buoyant Force</p>
-            
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <div class="text-center mb-4">
+                    <div class="project-category mb-3">
+                        <span class="badge rounded-pill px-3 py-2" style="background: rgba(255, 193, 7, 0.2); color: #ffc107;">
+                            <i class="fas fa-flask me-2"></i>Scientific Research
+                        </span>
+                    </div>
+                    <h1 class="section-title mb-3">ISS Science Research Project</h1>
+                    <p class="section-subtitle mb-4">Investigating Salt Concentration Effects on Buoyant Force</p>
+                </div>
                 
                 <div class="row align-items-center">
                     <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="../projectPictures/IssResearchPictures/IssGroupPhoto.jpg" alt="ISS Research Project" class="img-fluid rounded-3" style="width: 100%; height: auto;">
+                        <div class="project-image-container rounded-3 overflow-hidden">
+                            <img src="../projectPictures/IssResearchPictures/IssGroupPhoto.jpg" 
+                                alt="ISS Research Project Team" 
+                                class="img-fluid w-100" 
+                                style="aspect-ratio: 16/9; object-fit: cover;">
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <h3 class="project-title mb-3">Problem Statement</h3>
-                        <p class="project-description mb-3"><strong>Effect of salt concentration of a buoyant force on a miniature ship.</strong></p>
-                        
-                        <h3 class="project-title mb-3">Project Context</h3>
-                        <p class="project-description mb-4">My group and I researched how the salt concentration in water affects the buoyant force on a miniature ship. We chose this topic due to the rapid growth of the shipping industry following its halt during COVID-19. This research project aims to provide conclusive data on whether salt concentration influences the buoyancy force acting on ships during shipments.</p>
-                        
-                        <div class="d-flex flex-wrap gap-2 mb-4">
-                            <span class="project-tag badge rounded-pill px-3 py-2">Physics Research</span>
-                            <span class="project-tag badge rounded-pill px-3 py-2">Data Analysis</span>
-                            <span class="project-tag badge rounded-pill px-3 py-2">Scientific Method</span>
-                            <span class="project-tag badge rounded-pill px-3 py-2">Data Logging</span>
-                        </div>
-                        
-                        <div class="d-flex gap-3">
-                            <a href="https://docs.google.com/document/d/1kbJliOctIZkVEhGZLotnW5TCszzZYT7i/edit?usp=sharing&ouid=103535895841501143398&rtpof=true&sd=true" target="_blank" class="tech-tag badge rounded-pill px-3 py-2 text-decoration-none">
-                                <i class="fas fa-external-link-alt me-2"></i>Find Out More
-                            </a>
-                            <a href="https://docs.google.com/spreadsheets/d/1VfX7GS-jdkxYGOjAPUAcOIiaH_2K3meQDDgSnVDEt74/edit?usp=sharing" target="_blank" class="tech-tag badge rounded-pill px-3 py-2 text-decoration-none">
-                                <i class="fas fa-chart-line me-2"></i>View Data
-                            </a>
+                        <div class="glass-dark rounded-3 p-4">
+                            <h3 class="h4 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-question-circle me-2"></i>Problem Statement
+                            </h3>
+                            <p class="mb-4" style="color: #cbd3f2; font-size: 1.1rem;">
+                                <strong>Effect of salt concentration of a buoyant force on a miniature ship.</strong>
+                            </p>
+                            
+                            <h3 class="h5 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-info-circle me-2"></i>Project Context
+                            </h3>
+                            <p class="mb-4" style="color: #cbd3f2; line-height: 1.6;">
+                                My group and I researched how the salt concentration in water affects the buoyant force on a miniature ship. 
+                                We chose this topic due to the rapid growth of the shipping industry following its halt during COVID-19. 
+                                This research project aims to provide conclusive data on whether salt concentration influences the buoyancy 
+                                force acting on ships during shipments.
+                            </p>
+                            
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="project-tag badge rounded-pill px-3 py-2">Physics Research</span>
+                                <span class="project-tag badge rounded-pill px-3 py-2">Data Analysis</span>
+                                <span class="project-tag badge rounded-pill px-3 py-2">Scientific Method</span>
+                                <span class="project-tag badge rounded-pill px-3 py-2">Team Collaboration</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Research Method & Results -->
-            <div class="glass rounded-4 p-4 p-md-5 mb-5 glass-hover">
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
                 <div class="row align-items-center">
                     <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-                        <img src="../projectPictures/IssResearchPictures/IssPoster.png" alt="Research Setup" class="img-fluid rounded-3" style="width: 100%; height: auto;">
+                        <div class="project-image-container rounded-3 overflow-hidden">
+                            <img src="../projectPictures/IssResearchPictures/IssPoster.png" 
+                                alt="Research Poster and Results" 
+                                class="img-fluid w-100" 
+                                style="object-fit: cover;">
+                        </div>
                     </div>
                     <div class="col-md-6 order-md-1">
-                        <h3 class="project-title mb-3">Result Collection</h3>
-                        <p class="project-description mb-4">We used a data logger connected to a salinity metre to collect the data on whether there would be a change in buoyant force acting on the miniature ship. We inputted the data into a spreadsheet, and I created a graph to process the collected data. We were using the graph to visualise the trends.</p>
-                        
-                        <h3 class="project-title mb-3">Reflection</h3>
-                        <p class="project-description mb-4">This project taught me the fundamentals of conducting research, enhancing my people skills and ability to collaborate closely, even when we couldn't meet in person to discuss and share ideas. Additionally, this project enlightened my group by showing us that salt concentration in water does not affect the buoyant force acting on ships.</p>
-                        
-                        <h4 class="project-title mb-3" style="font-size: 1.3rem;">Key Learning Points</h4>
-                        <ul class="project-description" style="list-style: none; padding-left: 0;">
-                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>How to export data from a data logger</li>
-                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>How to credit and cite sources of information</li>
-                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>Standard science research procedures</li>
-                        </ul>
+                        <div class="glass-dark rounded-3 p-4">
+                            <h3 class="h4 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-chart-line me-2"></i>Data Collection & Analysis
+                            </h3>
+                            <p class="mb-4" style="color: #cbd3f2; line-height: 1.6;">
+                                We used a data logger connected to a salinity metre to collect precise data on buoyant force changes. 
+                                The data was systematically inputted into spreadsheets, and I created comprehensive graphs to visualize 
+                                the collected data and identify trends in our findings.
+                            </p>
+                            
+                            <h3 class="h5 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-lightbulb me-2"></i>Key Findings
+                            </h3>
+                            <p class="mb-4" style="color: #cbd3f2; line-height: 1.6;">
+                                Our research conclusively demonstrated that <strong>salt concentration in water does not significantly 
+                                affect the buoyant force acting on ships</strong>, providing valuable insights for maritime engineering 
+                                and shipping industry considerations.
+                            </p>
+                            
+                            <h4 class="h6 mb-3" style="color: #cba6f7;">Learning Outcomes</h4>
+                            <ul style="list-style: none; padding-left: 0; color: #cbd3f2;">
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Data logger operation and data extraction
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Scientific research methodology and procedures
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Academic source citation and documentation
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Remote collaboration and team coordination
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Project Resources -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <h3 class="h4 text-center mb-4" style="color: #cba6f7;">
+                    <i class="fas fa-folder-open me-2"></i>Project Resources
+                </h3>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-md-6">
+                        <a href="https://docs.google.com/document/d/1kbJliOctIZkVEhGZLotnW5TCszzZYT7i/edit?usp=sharing&ouid=103535895841501143398&rtpof=true&sd=true" 
+                           target="_blank" 
+                           class="glass-dark p-4 rounded-3 text-decoration-none d-block glass-hover">
+                            <div class="text-center">
+                                <i class="fas fa-file-alt" style="font-size: 2rem; color: #cba6f7; margin-bottom: 15px;"></i>
+                                <h5 style="color: #cbd3f2;">Research Document</h5>
+                                <p style="color: #cbd3f2; font-size: 0.9rem;">Complete research findings and methodology</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="https://docs.google.com/spreadsheets/d/1VfX7GS-jdkxYGOjAPUAcOIiaH_2K3meQDDgSnVDEt74/edit?usp=sharing" 
+                           target="_blank" 
+                           class="glass-dark p-4 rounded-3 text-decoration-none d-block glass-hover">
+                            <div class="text-center">
+                                <i class="fas fa-chart-line" style="font-size: 2rem; color: #cba6f7; margin-bottom: 15px;"></i>
+                                <h5 style="color: #cbd3f2;">Data & Analysis</h5>
+                                <p style="color: #cbd3f2; font-size: 0.9rem;">Raw data, calculations, and visual graphs</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
+            </div>
 
             <!-- Back to Projects Button -->
             <div class="text-center mb-5">
-                <a href="../../index.html#projects" class="tech-tag badge rounded-pill px-4 py-3 text-decoration-none" style="font-size: 1rem;">
-                    <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                <a href="../../index.html#projects" class="glass p-3 rounded-3 text-decoration-none d-inline-flex align-items-center glass-hover" style="color: #cba6f7; font-size: 1.1rem;">
+                    <i class="fas fa-arrow-left me-2"></i>Explore More Projects
                 </a>
             </div>
         </div>

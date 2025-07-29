@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 2.0 Project - Yikai Tan</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../CSS/style.css">
+    
+    <!-- Floating particles background -->
+    <style>
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(203, 166, 247, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+        }
+        
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 6s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 8s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 10s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 12s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 14s; }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-10vh) rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating particles background -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Project Navigation Bar -->
+    <div class="progress-bar-container">
+        <div class="progress-bar-track">
+            <div class="progress-indicator" data-section="home">
+                <a href="../../index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-home"></i>
+                    <span class="progress-label">Home</span>
+                </a>
+            </div>
+            <div class="progress-indicator active" data-section="portfolio2">
+                <a href="../Portfolio2/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-rocket"></i>
+                    <span class="progress-label">Portfolio 2.0</span>
+                </a>
+            </div>
+            <div class="progress-indicator" data-section="portfolio1">
+                <a href="../Portfolio/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-laptop-code"></i>
+                    <span class="progress-label">Portfolio 1.0</span>
+                </a>
+            </div>
+            <div class="progress-indicator" data-section="multilingo">
+                <a href="../Multilingo/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-language"></i>
+                    <span class="progress-label">MultiLingo</span>
+                </a>
+            </div>
+            <div class="progress-indicator" data-section="iss">
+                <a href="../IssResearchProject/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-flask"></i>
+                    <span class="progress-label">ISS Research</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="glass-navbar" id="glassNavbar">
+        <button class="hamburger-btn" id="hamburgerBtn">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </button>
+        
+        <div class="nav-menu" id="navMenu">
+            <div class="nav-item">
+                <a href="../../index.html" class="nav-link">
+                    <i class="fas fa-home me-2"></i>Home
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#about" class="nav-link">
+                    <i class="fas fa-user me-2"></i>About
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#education" class="nav-link">
+                    <i class="fas fa-graduation-cap me-2"></i>Education
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#certifications" class="nav-link">
+                    <i class="fas fa-certificate me-2"></i>Certifications
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#projects" class="nav-link">
+                    <i class="fas fa-code me-2"></i>Projects
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#competitions" class="nav-link">
+                    <i class="fas fa-trophy me-2"></i>Competitions
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#service" class="nav-link">
+                    <i class="fas fa-heart me-2"></i>Community
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#contact" class="nav-link">
+                    <i class="fas fa-envelope me-2"></i>Contact
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Content -->
+    <div class="container-fluid hero-section" style="min-height: auto; padding-top: 60px;">
+        <div class="container">
+            <!-- Back Button -->
+            <div class="mb-4">
+                <a href="../../index.html#projects" class="glass p-3 rounded-3 text-decoration-none d-inline-flex align-items-center glass-hover" style="color: #cba6f7;">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                </a>
+            </div>
+
+            <!-- Project Header -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <div class="text-center mb-4">
+                    <div class="project-category mb-3">
+                        <span class="badge rounded-pill px-3 py-2" style="background: rgba(156, 39, 176, 0.2); color: #9c27b0;">
+                            <i class="fas fa-rocket me-2"></i>Advanced Web Development
+                        </span>
+                    </div>
+                    <h1 class="section-title mb-3">Portfolio 2.0</h1>
+                    <p class="section-subtitle mb-4">The Evolution of Modern Web Design</p>
+                </div>
+                
+                <div class="row align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div class="project-image-container rounded-3 overflow-hidden">
+                            <img src="../projectPictures/PortfolioV2/PortfolioV2Main.png" 
+                                alt="Portfolio 2.0 Advanced Design" 
+                                class="img-fluid w-100" 
+                                style="aspect-ratio: 16/9; object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="glass-dark rounded-3 p-4">
+                            <h3 class="h4 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-star me-2"></i>Project Vision
+                            </h3>
+                            <p class="mb-4" style="color: #cbd3f2; font-size: 1.1rem; line-height: 1.6;">
+                                Portfolio 2.0 represents a complete transformation from basic web development to advanced modern design. 
+                                This project showcases mastery of contemporary web technologies, featuring glass morphism aesthetics, 
+                                interactive elements, and sophisticated user experience design. Enhanced with Light AI assistance for 
+                                optimal code optimization and modern development practices.
+                            </p>
+                            
+                            <h3 class="h5 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-magic me-2"></i>Design Philosophy
+                            </h3>
+                            <p class="mb-4" style="color: #cbd3f2; line-height: 1.6;">
+                                Embracing the glass morphism trend while maintaining excellent usability and accessibility. 
+                                Every element is carefully crafted to provide an immersive yet functional experience that 
+                                reflects modern web design principles and best practices.
+                            </p>
+                            
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="project-tag badge rounded-pill px-3 py-2">HTML5</span>
+                                <span class="project-tag badge rounded-pill px-3 py-2">CSS3</span>
+                                <span class="project-tag badge rounded-pill px-3 py-2">JavaScript ES6+</span>
+                                <span class="project-tag badge rounded-pill px-3 py-2">Bootstrap 5</span>
+                                <span class="project-tag badge rounded-pill px-3 py-2">Glass Morphism</span>
+                                <span class="project-tag badge rounded-pill px-3 py-2">Light AI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Implementation -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                        <div class="glass-dark rounded-3 p-4">
+                            <h3 class="h4 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-palette me-2"></i>Advanced Features
+                            </h3>
+                            <ul style="list-style: none; padding-left: 0; color: #cbd3f2;">
+                                <li class="mb-3">
+                                    <i class="fas fa-sparkles me-3" style="color: #cba6f7;"></i>
+                                    <strong>Glass Morphism Design:</strong> Sophisticated blur effects and transparency layers
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-chart-line me-3" style="color: #cba6f7;"></i>
+                                    <strong>Progress Tracking:</strong> Interactive progress bar with section indicators
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-mobile-alt me-3" style="color: #cba6f7;"></i>
+                                    <strong>Responsive Design:</strong> Seamless experience across all devices
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-mouse-pointer me-3" style="color: #cba6f7;"></i>
+                                    <strong>Interactive Elements:</strong> Hover effects, animations, and smooth transitions
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-tachometer-alt me-3" style="color: #cba6f7;"></i>
+                                    <strong>Performance Optimized:</strong> Fast loading with minimal resource usage
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-robot me-3" style="color: #cba6f7;"></i>
+                                    <strong>AI-Enhanced Development:</strong> Light AI assistance for code optimization and best practices
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-1">
+                        <div class="glass-dark rounded-3 p-4">
+                            <h3 class="h4 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-code me-2"></i>Technical Achievements
+                            </h3>
+                            <p class="mb-4" style="color: #cbd3f2; line-height: 1.6;">
+                                This portfolio demonstrates advanced CSS techniques including backdrop-filter effects, 
+                                custom animations, and sophisticated layout systems. JavaScript implementation features 
+                                smooth scrolling, dynamic navigation states, and interactive progress tracking.
+                            </p>
+                            
+                            <h3 class="h5 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-brain me-2"></i>Development Insights
+                            </h3>
+                            <p class="mb-4" style="color: #cbd3f2; line-height: 1.6;">
+                                The project required deep understanding of modern CSS properties, browser compatibility, 
+                                and performance optimization. Special attention was given to creating a cohesive design 
+                                system that maintains consistency while allowing for creative expression. Light AI was 
+                                leveraged for code review, optimization suggestions, and implementing modern web standards.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Innovation Showcase -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <h3 class="h4 text-center mb-4" style="color: #cba6f7;">
+                    <i class="fas fa-lightbulb me-2"></i>Innovation Highlights
+                </h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="glass-dark p-4 rounded-3 h-100 text-center">
+                            <i class="fas fa-eye" style="font-size: 2.5rem; color: #cba6f7; margin-bottom: 20px;"></i>
+                            <h5 style="color: #cbd3f2; margin-bottom: 15px;">Visual Excellence</h5>
+                            <p style="color: #cbd3f2; font-size: 0.9rem; line-height: 1.6;">
+                                Cutting-edge glass morphism effects with carefully balanced transparency and blur effects 
+                                that create depth without compromising readability.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="glass-dark p-4 rounded-3 h-100 text-center">
+                            <i class="fas fa-cogs" style="font-size: 2.5rem; color: #cba6f7; margin-bottom: 20px;"></i>
+                            <h5 style="color: #cbd3f2; margin-bottom: 15px;">Technical Mastery</h5>
+                            <p style="color: #cbd3f2; font-size: 0.9rem; line-height: 1.6;">
+                                Advanced CSS techniques, JavaScript ES6+ features, and modern development practices 
+                                showcase significant growth from the original portfolio.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="glass-dark p-4 rounded-3 h-100 text-center">
+                            <i class="fas fa-users" style="font-size: 2.5rem; color: #cba6f7; margin-bottom: 20px;"></i>
+                            <h5 style="color: #cbd3f2; margin-bottom: 15px;">User Experience</h5>
+                            <p style="color: #cbd3f2; font-size: 0.9rem; line-height: 1.6;">
+                                Intuitive navigation, smooth interactions, and thoughtful information architecture 
+                                create an engaging and memorable user experience.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Journey -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <h3 class="h4 text-center mb-4" style="color: #cba6f7;">
+                    <i class="fas fa-graduation-cap me-2"></i>Skills Developed
+                </h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="glass-dark rounded-3 p-4 h-100">
+                            <h4 class="h5 mb-3" style="color: #cba6f7;">Frontend Technologies</h4>
+                            <ul style="list-style: none; padding-left: 0; color: #cbd3f2;">
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Advanced CSS3 with custom properties and animations
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Modern JavaScript ES6+ features and DOM manipulation
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Bootstrap 5 framework and responsive design principles
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Font Awesome integration and icon usage
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="glass-dark rounded-3 p-4 h-100">
+                            <h4 class="h5 mb-3" style="color: #cba6f7;">Design & UX</h4>
+                            <ul style="list-style: none; padding-left: 0; color: #cbd3f2;">
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Glass morphism design implementation
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Color theory and accessibility considerations
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Interactive element design and micro-interactions
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Mobile-first responsive design approach
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Resources -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <h3 class="h4 text-center mb-4" style="color: #cba6f7;">
+                    <i class="fas fa-code-branch me-2"></i>Source Code & Live Demo
+                </h3>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6">
+                        <a href="https://github.com/Yikai-Tan/yikai-tan.github.io" 
+                           target="_blank" 
+                           class="glass-dark p-4 rounded-3 text-decoration-none d-block glass-hover">
+                            <div class="text-center">
+                                <i class="fab fa-github" style="font-size: 3rem; color: #cba6f7; margin-bottom: 20px;"></i>
+                                <h5 style="color: #cbd3f2; margin-bottom: 15px;">View Source Code</h5>
+                                <p style="color: #cbd3f2; font-size: 1rem; line-height: 1.6; margin-bottom: 15px;">
+                                    Explore the complete codebase on GitHub. See the implementation of glass morphism effects, 
+                                    responsive design patterns, and modern web development techniques enhanced with Light AI assistance.
+                                </p>
+                                <div class="d-flex justify-content-center gap-2 flex-wrap">
+                                    <span class="badge rounded-pill px-2 py-1" style="background: rgba(203, 166, 247, 0.2); color: #cba6f7; font-size: 0.8rem;">Open Source</span>
+                                    <span class="badge rounded-pill px-2 py-1" style="background: rgba(203, 166, 247, 0.2); color: #cba6f7; font-size: 0.8rem;">Well Documented</span>
+                                    <span class="badge rounded-pill px-2 py-1" style="background: rgba(203, 166, 247, 0.2); color: #cba6f7; font-size: 0.8rem;">AI Enhanced</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="glass-dark p-4 rounded-3 text-center">
+                            <i class="fas fa-globe" style="font-size: 3rem; color: #cba6f7; margin-bottom: 20px;"></i>
+                            <h5 style="color: #cbd3f2; margin-bottom: 15px;">Live Portfolio Experience</h5>
+                            <p style="color: #cbd3f2; font-size: 1rem; line-height: 1.6; margin-bottom: 20px;">
+                                You're currently experiencing Portfolio 2.0 in action! Every glass morphism effect, 
+                                smooth animation, and interactive element represents the evolution of modern web design.
+                            </p>
+                            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                                <a href="../../index.html#home" class="glass p-2 rounded-3 text-decoration-none d-inline-flex align-items-center glass-hover" style="color: #cba6f7; font-size: 0.9rem;">
+                                    <i class="fas fa-home me-2"></i>Explore Home
+                                </a>
+                                <a href="../../index.html#projects" class="glass p-2 rounded-3 text-decoration-none d-inline-flex align-items-center glass-hover" style="color: #cba6f7; font-size: 0.9rem;">
+                                    <i class="fas fa-eye me-2"></i>All Projects
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back to Projects Button -->
+            <div class="text-center mb-5">
+                <a href="../../index.html#projects" class="glass p-3 rounded-3 text-decoration-none d-inline-flex align-items-center glass-hover" style="color: #cba6f7; font-size: 1.1rem;">
+                    <i class="fas fa-arrow-left me-2"></i>Explore More Projects
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for navbar functionality -->
+    <script src="../../JS/navbar.js"></script>
+</body>
+</html>

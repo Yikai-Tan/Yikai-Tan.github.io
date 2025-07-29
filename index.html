@@ -9,15 +9,109 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./CSS/style.css">
+    
+    <!-- Floating particles background -->
+    <style>
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(203, 166, 247, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+        }
+        
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 6s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 8s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 10s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 12s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 14s; }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-10vh) rotate(180deg);
+            }
+        }
+    </style>
 
 </head>
 <body>
+    <!-- Floating particles background -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Page Progress Bar -->
+    <div class="progress-bar-container">
+        <div class="progress-bar-track">
+            <div class="progress-indicator" data-section="home">
+                <i class="fas fa-home"></i>
+                <span class="progress-label">Home</span>
+            </div>
+            <div class="progress-indicator" data-section="about">
+                <i class="fas fa-user"></i>
+                <span class="progress-label">About</span>
+            </div>
+            <div class="progress-indicator" data-section="education">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="progress-label">Education</span>
+            </div>
+            <div class="progress-indicator" data-section="certifications">
+                <i class="fas fa-certificate"></i>
+                <span class="progress-label">Certifications</span>
+            </div>
+            <div class="progress-indicator" data-section="projects">
+                <i class="fas fa-code"></i>
+                <span class="progress-label">Projects</span>
+            </div>
+            <div class="progress-indicator" data-section="competitions">
+                <i class="fas fa-trophy"></i>
+                <span class="progress-label">Competitions</span>
+            </div>
+            <div class="progress-indicator" data-section="service">
+                <i class="fas fa-heart"></i>
+                <span class="progress-label">Service</span>
+            </div>
+            <div class="progress-indicator" data-section="contact">
+                <i class="fas fa-envelope"></i>
+                <span class="progress-label">Contact</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation Bar (Preserved) -->
     <nav class="glass-navbar" id="glassNavbar">
         <button class="hamburger-btn" id="hamburgerBtn">
@@ -28,13 +122,44 @@
         
         <div class="nav-menu" id="navMenu">
             <div class="nav-item">
-                <a href="#home" class="nav-link">Home</a>
+                <a href="#home" class="nav-link">
+                    <i class="fas fa-home me-2"></i>Home
+                </a>
             </div>
             <div class="nav-item">
-                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#about" class="nav-link">
+                    <i class="fas fa-user me-2"></i>About
+                </a>
             </div>
             <div class="nav-item">
-                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#education" class="nav-link">
+                    <i class="fas fa-graduation-cap me-2"></i>Education
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#certifications" class="nav-link">
+                    <i class="fas fa-certificate me-2"></i>Certifications
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#projects" class="nav-link">
+                    <i class="fas fa-code me-2"></i>Projects
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#competitions" class="nav-link">
+                    <i class="fas fa-trophy me-2"></i>Competitions
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#service" class="nav-link">
+                    <i class="fas fa-heart me-2"></i>Community
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="#contact" class="nav-link">
+                    <i class="fas fa-envelope me-2"></i>Contact
+                </a>
             </div>
         </div>
     </nav>
@@ -79,6 +204,7 @@
 
                 <!-- Technology Tags -->
                 <div class="glass rounded-4 p-4 mb-4 glass-hover">
+                    <h4 class="text-center mb-3" style="color: #cba6f7; font-size: 1.1rem;">Tech Stack & Expertise</h4>
                     <div class="d-flex flex-wrap justify-content-center gap-2">
                         <span class="tech-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-2">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
@@ -113,12 +239,20 @@
                                 alt="GitHub" width="20" height="20">
                             GitHub
                         </span>
+                        <span class="tech-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-2">
+                            <i class="fas fa-shield-alt" style="color: #e74c3c;"></i>
+                            Cybersecurity
+                        </span>
+                        <span class="tech-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-2">
+                            <i class="fas fa-brain" style="color: #ff6b6b;"></i>
+                            AI/ML
+                        </span>
                     </div>
                 </div>
 
                 <!-- Scroll Arrow -->
                 <div class="text-center">
-                    <a href="#certifications" class="text-decoration-none">
+                    <a href="#about" class="text-decoration-none">
                         <svg class="arrow-down" fill="#cba6f7" viewBox="0 0 24 24">
                             <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
                         </svg>
@@ -128,10 +262,196 @@
         </div>
     </div>
 
-    <!-- Certifications Section -->
-    <div class="container-fluid py-5" id="certifications">
+    <!-- About Section -->
+    <div class="container-fluid py-4" id="about">
         <div class="container">
-            <div class="glass rounded-4 p-4 p-md-5 mb-5 glass-hover">
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <h1 class="section-title text-center mb-4">About Me</h1>
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="glass-dark rounded-3 p-4 mb-4">
+                            <h3 class="h4 mb-3 text-center" style="color: #cba6f7;">Passionate Cybersecurity Student & Developer</h3>
+                            <p class="text-center mb-4" style="color: #cbd3f2; font-size: 1.1rem; line-height: 1.7;">
+                                I'm a dedicated cybersecurity student at Singapore Polytechnic, driven by a passion for protecting digital assets 
+                                and creating innovative solutions. My journey in technology spans across cybersecurity, web development, 
+                                and artificial intelligence, where I continuously seek to bridge the gap between security and user experience.
+                            </p>
+                        </div>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="glass-dark rounded-3 p-3 text-center h-100">
+                                    <div class="mb-2">
+                                        <i class="fas fa-shield-alt" style="font-size: 2rem; color: #cba6f7;"></i>
+                                    </div>
+                                    <h5 style="color: #cbd3f2;">Security Focus</h5>
+                                    <p style="color: #cbd3f2; font-size: 0.9rem;">Cybersecurity fundamentals and best practices</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="glass-dark rounded-3 p-3 text-center h-100">
+                                    <div class="mb-2">
+                                        <i class="fas fa-code" style="font-size: 2rem; color: #cba6f7;"></i>
+                                    </div>
+                                    <h5 style="color: #cbd3f2;">Development</h5>
+                                    <p style="color: #cbd3f2; font-size: 0.9rem;">Full-stack web development and AI integration</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="glass-dark rounded-3 p-3 text-center h-100">
+                                    <div class="mb-2">
+                                        <i class="fas fa-lightbulb" style="font-size: 2rem; color: #cba6f7;"></i>
+                                    </div>
+                                    <h5 style="color: #cbd3f2;">Innovation</h5>
+                                    <p style="color: #cbd3f2; font-size: 0.9rem;">Creating solutions that matter</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="container-fluid py-4" id="education">
+        <div class="container">
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <h1 class="section-title text-center mb-2">Education</h1>
+                <p class="section-subtitle text-center mb-5">My academic journey</p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="education-timeline">
+                            <!-- Current Education -->
+                            <div class="education-item glass-dark rounded-3 p-4 mb-4 position-relative">
+                                <div class="education-badge">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <h3 class="h4 mb-2" style="color: #cba6f7;">Diploma in Cybersecurity</h3>
+                                        <h4 class="h5 mb-2" style="color: #cbd3f2;">Singapore Polytechnic - School of Computing</h4>
+                                        <p class="mb-2" style="color: #cbd3f2;">
+                                            <i class="fas fa-calendar-alt me-2"></i>2025 - 2028 (Expected)
+                                        </p>
+                                        <p style="color: #cbd3f2; font-size: 0.95rem; line-height: 1.6;">
+                                            Comprehensive program covering network security, ethical hacking, digital forensics, 
+                                            risk management, and cybersecurity frameworks. Hands-on experience with industry-standard 
+                                            tools and techniques.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="education-status glass p-3 rounded-3">
+                                            <span class="status-badge badge rounded-pill px-3 py-2" style="background: rgba(203, 166, 247, 0.2); color: #cba6f7;">
+                                                Currently Pursuing
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Key Modules -->
+                                <div class="mt-3">
+                                    <h5 style="color: #cba6f7; font-size: 1rem;">Key Modules:</h5>
+                                    <div class="d-flex flex-wrap gap-2 mt-2">
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Network Security</span>
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Ethical Hacking</span>
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Digital Forensics</span>
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Incident Response</span>
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Risk Management</span>
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Cryptography</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Previous Education - Secondary -->
+                            <div class="education-item glass-dark rounded-3 p-4 mb-4 position-relative">
+                                <div class="education-badge">
+                                    <i class="fas fa-school"></i>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <h3 class="h4 mb-2" style="color: #cba6f7;">Secondary Education</h3>
+                                        <h4 class="h5 mb-2" style="color: #cbd3f2;">School of Science and Technology</h4>
+                                        <p class="mb-2" style="color: #cbd3f2;">
+                                            <i class="fas fa-calendar-alt me-2"></i>2020 - 2024
+                                        </p>
+                                        <p style="color: #cbd3f2; font-size: 0.95rem; line-height: 1.6;">
+                                            Completed secondary education with a strong foundation in science and technology. 
+                                            Developed early interest in computing, programming, and digital systems which led 
+                                            to pursuing cybersecurity at the tertiary level.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="education-status glass p-3 rounded-3">
+                                            <span class="status-badge badge rounded-pill px-3 py-2" style="background: rgba(129, 199, 132, 0.2); color: #81c784;">
+                                                Completed
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Key Subjects -->
+                                <div class="mt-3">
+                                    <h5 style="color: #cba6f7; font-size: 1rem;">Focus Areas:</h5>
+                                    <div class="d-flex flex-wrap gap-2 mt-2">
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Science & Technology</span>
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Mathematics</span>
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Computer Studies</span>
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Problem Solving</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Primary Education -->
+                            <div class="education-item glass-dark rounded-3 p-4 mb-4 position-relative">
+                                <div class="education-badge">
+                                    <i class="fas fa-book-open"></i>
+                                </div>
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <h3 class="h4 mb-2" style="color: #cba6f7;">Primary Education</h3>
+                                        <h4 class="h5 mb-2" style="color: #cbd3f2;">Elias Park Primary School</h4>
+                                        <p class="mb-2" style="color: #cbd3f2;">
+                                            <i class="fas fa-calendar-alt me-2"></i>2018 - 2024
+                                        </p>
+                                        <p style="color: #cbd3f2; font-size: 0.95rem; line-height: 1.6;">
+                                            Built strong foundational skills in core subjects and developed early passion for 
+                                            technology and learning. Active participation in various school activities and 
+                                            academic pursuits that shaped my educational journey.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="education-status glass p-3 rounded-3">
+                                            <span class="status-badge badge rounded-pill px-3 py-2" style="background: rgba(129, 199, 132, 0.2); color: #81c784;">
+                                                Completed
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Key Achievements -->
+                                <div class="mt-3">
+                                    <h5 style="color: #cba6f7; font-size: 1rem;">Foundation:</h5>
+                                    <div class="d-flex flex-wrap gap-2 mt-2">
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Academic Excellence</span>
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Leadership Skills</span>
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Technology Interest</span>
+                                        <span class="module-tag badge rounded-pill px-3 py-2">Critical Thinking</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certifications Section -->
+    <div class="container-fluid py-4" id="certifications">
+        <div class="container">
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
                 <h1 class="section-title text-center mb-2">Certifications</h1>
                 <p class="section-subtitle text-center mb-4">Click each to find out more</p>
                 
@@ -139,32 +459,80 @@
                     <div class="col-sm-6 col-lg-3">
                         <a href="https://www.linkedin.com/in/yikaitan/details/certifications/" target="_blank" class="text-decoration-none">
                             <div class="cert-card glass-dark rounded-3 p-4 h-100 glass-hover text-center">
+                                <div class="cert-icon mb-3">
+                                    <i class="fab fa-apple" style="font-size: 2.5rem; color: #007aff;"></i>
+                                </div>
                                 <h3 class="h5 mb-3">Apple Teacher</h3>
-                                <span class="cert-tag badge rounded-pill px-3 py-2">Apple</span>
+                                <p class="cert-description mb-3" style="color: #cbd3f2; font-size: 0.9rem;">
+                                    Professional development program recognizing educators who integrate Apple technology effectively
+                                </p>
+                                <span class="cert-tag badge rounded-pill px-3 py-2">Apple Education</span>
+                                <div class="cert-skills mt-3">
+                                    <div class="d-flex flex-wrap gap-1 justify-content-center">
+                                        <span class="skill-micro badge rounded-pill px-2 py-1">Educational Technology</span>
+                                        <span class="skill-micro badge rounded-pill px-2 py-1">Digital Pedagogy</span>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <a href="https://learn.aisingapore.org/certificate-verification/815F788422-7EF95E2447-139041326/" target="_blank" class="text-decoration-none">
                             <div class="cert-card glass-dark rounded-3 p-4 h-100 glass-hover text-center">
+                                <div class="cert-icon mb-3">
+                                    <i class="fas fa-brain" style="font-size: 2.5rem; color: #ff6b6b;"></i>
+                                </div>
                                 <h3 class="h5 mb-3">AI4I® – Literacy in AI</h3>
+                                <p class="cert-description mb-3" style="color: #cbd3f2; font-size: 0.9rem;">
+                                    Foundational understanding of artificial intelligence concepts and their practical applications
+                                </p>
                                 <span class="cert-tag badge rounded-pill px-3 py-2">AI Singapore</span>
+                                <div class="cert-skills mt-3">
+                                    <div class="d-flex flex-wrap gap-1 justify-content-center">
+                                        <span class="skill-micro badge rounded-pill px-2 py-1">AI Fundamentals</span>
+                                        <span class="skill-micro badge rounded-pill px-2 py-1">Machine Learning</span>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <a href="https://learn.aisingapore.org/certificate-verification/815FA64BAD-7337BFF0DB-139041326/" target="_blank" class="text-decoration-none">
                             <div class="cert-card glass-dark rounded-3 p-4 h-100 glass-hover text-center">
+                                <div class="cert-icon mb-3">
+                                    <i class="fas fa-robot" style="font-size: 2.5rem; color: #4ecdc4;"></i>
+                                </div>
                                 <h3 class="h5 mb-3">AI4I® – Foundations in AI</h3>
+                                <p class="cert-description mb-3" style="color: #cbd3f2; font-size: 0.9rem;">
+                                    Advanced foundations in artificial intelligence with hands-on experience in AI development
+                                </p>
                                 <span class="cert-tag badge rounded-pill px-3 py-2">AI Singapore</span>
+                                <div class="cert-skills mt-3">
+                                    <div class="d-flex flex-wrap gap-1 justify-content-center">
+                                        <span class="skill-micro badge rounded-pill px-2 py-1">AI Development</span>
+                                        <span class="skill-micro badge rounded-pill px-2 py-1">Neural Networks</span>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="col-sm-6 col-lg-3">
                         <a href="https://www.credly.com/badges/9f780090-f884-46e4-bec0-44171131531f/" target="_blank" class="text-decoration-none">
                             <div class="cert-card glass-dark rounded-3 p-4 h-100 glass-hover text-center">
+                                <div class="cert-icon mb-3">
+                                    <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: #ffa726;"></i>
+                                </div>
                                 <h3 class="h5 mb-3">Fundamentals in Cybersecurity</h3>
-                                <span class="cert-tag badge rounded-pill px-3 py-2">Cisco</span>
+                                <p class="cert-description mb-3" style="color: #cbd3f2; font-size: 0.9rem;">
+                                    Core cybersecurity principles, threat identification, and security best practices
+                                </p>
+                                <span class="cert-tag badge rounded-pill px-3 py-2">Cisco Networking</span>
+                                <div class="cert-skills mt-3">
+                                    <div class="d-flex flex-wrap gap-1 justify-content-center">
+                                        <span class="skill-micro badge rounded-pill px-2 py-1">Network Security</span>
+                                        <span class="skill-micro badge rounded-pill px-2 py-1">Threat Analysis</span>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -174,44 +542,108 @@
     </div>
 
     <!-- Projects Section -->
-    <div class="container-fluid py-5" id="projects">
+    <div class="container-fluid py-4" id="projects">
         <div class="container">
             <div class="glass rounded-4 p-4 p-md-5 glass-hover">
                 <h1 class="section-title text-center mb-2">Projects</h1>
                 <p class="section-subtitle text-center mb-5">Projects I've worked on</p>
                 
                 <div class="row g-4">
-<!--                     <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4">
                         <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover">
-                            <img src="./Projects/projectPictures/portfolioV1Pic1.png" 
-                                class="card-img-top" 
-                                alt="FED CA1 Website"
-                                style="height: 200px; object-fit: cover;">
-                            <div class="card-body p-4">
-                                <h2 class="project-title h5 mb-3">FED CA1 Website</h2>
-                                <p class="project-description mb-3">Front End Development Year 1, Continual Assessment 1 project.</p>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="project-tag badge rounded-pill px-3 py-2">HTML</span>
-                                    <span class="project-tag badge rounded-pill px-3 py-2">CSS</span>
+                            <a href="./Projects/Portfolio2/index.html" class="text-decoration-none">
+                                <div class="project-image-container">
+                                    <img src="./Projects/projectPictures/PortfolioV2/PortfolioV2CoverPicture.png" 
+                                        class="project-image" 
+                                        alt="Portfolio 2.0 Website">
+                                    <div class="project-overlay">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="card-body p-4">
+                                    <div class="project-header mb-3">
+                                        <h2 class="project-title h5 mb-2">Portfolio 2.0</h2>
+                                        <span class="project-status badge rounded-pill px-2 py-1" style="background: rgba(156, 39, 176, 0.2); color: #9c27b0;">Current</span>
+                                    </div>
+                                    <p class="project-description mb-3">Advanced portfolio with glass morphism design, interactive elements, and modern web technologies. A complete evolution from the foundation.</p>
+                                    <div class="project-tech mb-3">
+                                        <h6 class="tech-title">Technologies:</h6>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
+                                                    alt="HTML" width="16" height="16">
+                                                HTML5
+                                            </span>
+                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
+                                                    alt="CSS" width="16" height="16">
+                                                CSS3
+                                            </span>
+                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
+                                                    alt="JavaScript" width="16" height="16">
+                                                JavaScript
+                                            </span>
+                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" 
+                                                    alt="Bootstrap" width="16" height="16">
+                                                Bootstrap
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="project-stats">
+                                        <div class="d-flex justify-content-between text-muted">
+                                            <small><i class="fas fa-calendar me-1"></i>2025</small>
+                                            <small><i class="fas fa-rocket me-1"></i>Advanced Web</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </div> -->
-                    
+                    </div>
+
                     <div class="col-md-6 col-lg-4">
                         <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover">
                             <a href="./Projects/Portfolio/index.html" class="text-decoration-none">
-                                <img src="./Projects/projectPictures/PortfolioV1/PortfolioV1Main.png" 
-                                    class="card-img-top" 
-                                    alt="Portfolio Website"
-                                    style="height: 200px; object-fit: cover;">
+                                <div class="project-image-container">
+                                    <img src="./Projects/projectPictures/PortfolioV1/PortfolioV1Main.png" 
+                                        class="project-image" 
+                                        alt="Portfolio Website">
+                                    <div class="project-overlay">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </div>
+                                </div>
                                 <div class="card-body p-4">
-                                    <h2 class="project-title h5 mb-3">Portfolio 1.0</h2>
-                                    <p class="project-description mb-3">My journey on creating a portfolio from scratch and learning HTML, CSS.</p>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <span class="project-tag badge rounded-pill px-3 py-2">HTML</span>
-                                        <span class="project-tag badge rounded-pill px-3 py-2">CSS</span>
-                                        <span class="project-tag badge rounded-pill px-3 py-2">GitHub</span>
+                                    <div class="project-header mb-3">
+                                        <h2 class="project-title h5 mb-2">Portfolio 1.0</h2>
+                                        <span class="project-status badge rounded-pill px-2 py-1">Completed</span>
+                                    </div>
+                                    <p class="project-description mb-3">My journey on creating a portfolio from scratch and learning HTML, CSS. A foundational project that sparked my passion for web development.</p>
+                                    <div class="project-tech mb-3">
+                                        <h6 class="tech-title">Technologies:</h6>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
+                                                    alt="HTML" width="16" height="16">
+                                                HTML
+                                            </span>
+                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
+                                                    alt="CSS" width="16" height="16">
+                                                CSS
+                                            </span>
+                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+                                                    alt="GitHub" width="16" height="16">
+                                                GitHub
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="project-stats">
+                                        <div class="d-flex justify-content-between text-muted">
+                                            <small><i class="fas fa-calendar me-1"></i>2023</small>
+                                            <small><i class="fas fa-code me-1"></i>Web Development</small>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -221,17 +653,41 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover">
                             <a href="./Projects/Multilingo/index.html" class="text-decoration-none">
-                                <img src="./Projects/projectPictures/Multilingo/MultilingoMainPhoto.JPG" 
-                                    class="card-img-top" 
-                                    alt="MultiLingo"
-                                    style="height: 200px; object-fit: cover;">
+                                <div class="project-image-container">
+                                    <img src="./Projects/projectPictures/Multilingo/MultilingoMainPhoto.JPG" 
+                                        class="project-image" 
+                                        alt="MultiLingo">
+                                    <div class="project-overlay">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </div>
+                                </div>
                                 <div class="card-body p-4">
-                                    <h2 class="project-title h5 mb-3">MultiLingo</h2>
-                                    <p class="project-description mb-3">Breaking language barriers. One language at a time.</p>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <span class="project-tag badge rounded-pill px-3 py-2">Python</span>
-                                        <span class="project-tag badge rounded-pill px-3 py-2">🦜 LangChain</span>
-                                        <span class="project-tag badge rounded-pill px-3 py-2">ChatGPT 3.5 Turbo</span>
+                                    <div class="project-header mb-3">
+                                        <h2 class="project-title h5 mb-2">MultiLingo</h2>
+                                        <span class="project-status badge rounded-pill px-2 py-1" style="background: rgba(76, 175, 80, 0.2); color: #4caf50;">Featured</span>
+                                    </div>
+                                    <p class="project-description mb-3">Breaking language barriers. One language at a time. An AI-powered translation and language learning assistant built with modern technologies.</p>
+                                    <div class="project-tech mb-3">
+                                        <h6 class="tech-title">Technologies:</h6>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
+                                                    alt="Python" width="16" height="16">
+                                                Python
+                                            </span>
+                                            <span class="project-tag badge rounded-pill px-3 py-2">
+                                                🦜 LangChain
+                                            </span>
+                                            <span class="project-tag badge rounded-pill px-3 py-2">
+                                                <i class="fas fa-brain me-1"></i>GPT 3.5
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="project-stats">
+                                        <div class="d-flex justify-content-between text-muted">
+                                            <small><i class="fas fa-calendar me-1"></i>2024</small>
+                                            <small><i class="fas fa-robot me-1"></i>AI/ML</small>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
@@ -241,43 +697,416 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover">
                             <a href="./Projects/IssResearchProject/index.html" class="text-decoration-none">
-                                <img src="./Projects/projectPictures/IssResearchPictures/IssMainPhoto.JPG" 
-                                    class="card-img-top" 
-                                    alt="ISS Research Project"
-                                    style="height: 200px; object-fit: cover;">
+                                <div class="project-image-container">
+                                    <img src="./Projects/projectPictures/IssResearchPictures/IssMainPhoto.JPG" 
+                                        class="project-image" 
+                                        alt="ISS Research Project">
+                                    <div class="project-overlay">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </div>
+                                </div>
                                 <div class="card-body p-4">
-                                    <h2 class="project-title h5 mb-3">ISS Research Project</h2>
-                                    <p class="project-description mb-3">Effect of salt concentration of a buoyant force on a miniature ship.</p>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <span class="project-tag badge rounded-pill px-3 py-2">Scientific Research Practices</span>
-                                        <span class="project-tag badge rounded-pill px-3 py-2">Data Collection</span>
+                                    <div class="project-header mb-3">
+                                        <h2 class="project-title h5 mb-2">ISS Research Project</h2>
+                                        <span class="project-status badge rounded-pill px-2 py-1" style="background: rgba(255, 193, 7, 0.2); color: #ffc107;">Research</span>
+                                    </div>
+                                    <p class="project-description mb-3">Effect of salt concentration on buoyant force on a miniature ship. A comprehensive scientific research project demonstrating analytical skills.</p>
+                                    <div class="project-tech mb-3">
+                                        <h6 class="tech-title">Skills Applied:</h6>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <span class="project-tag badge rounded-pill px-3 py-2">
+                                                <i class="fas fa-microscope me-1"></i>Research
+                                            </span>
+                                            <span class="project-tag badge rounded-pill px-3 py-2">
+                                                <i class="fas fa-chart-bar me-1"></i>Data Analysis
+                                            </span>
+                                            <span class="project-tag badge rounded-pill px-3 py-2">
+                                                <i class="fas fa-flask me-1"></i>Science
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="project-stats">
+                                        <div class="d-flex justify-content-between text-muted">
+                                            <small><i class="fas fa-calendar me-1"></i>2023</small>
+                                            <small><i class="fas fa-flask me-1"></i>Research Project</small>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-
-<!--                     <div class="col-md-6 col-lg-4">
-                        <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover">
-                            <img src="./Projects/projectPictures/issPic1.JPG" 
-                                class="card-img-top" 
-                                alt="ISS Research Project"
-                                style="height: 200px; object-fit: cover;">
-                            <div class="card-body p-4">
-                                <h2 class="project-title h5 mb-3">ISS Research Project</h2>
-                                <p class="project-description mb-3">Effect of salt concentration of a buoyant force on a miniature ship.</p>
-                                <div class="d-flex flex-wrap gap-2">
-                                    <span class="project-tag badge rounded-pill px-3 py-2">Scientific Research Practices</span>
-                                    <span class="project-tag badge rounded-pill px-3 py-2">Data Collection</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Competitions Section -->
+    <div class="container-fluid py-4" id="competitions">
+        <div class="container">
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <h1 class="section-title text-center mb-2">Competitions & Achievements</h1>
+                <p class="section-subtitle text-center mb-5">Competing and learning through challenges</p>
+                
+                <div class="row g-4">
+                    <!-- CTF Competition Card 1 -->
+                    <div class="col-md-6">
+                        <div class="competition-card glass-dark rounded-3 p-4 h-100 glass-hover">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="competition-icon me-3">
+                                    <i class="fas fa-flag" style="font-size: 2rem; color: #e74c3c;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h3 class="h5 mb-2" style="color: #cba6f7;">CyberSec 5.0</h3>
+                                    <p class="mb-2" style="color: #cbd3f2; font-size: 0.9rem;">
+                                        <i class="fas fa-shield-alt me-2"></i>CTF Competition
+                                    </p>
+                                    <span class="competition-tag badge rounded-pill px-3 py-2 mb-3">Cybersecurity</span>
+                                </div>
+                            </div>
+                            <p style="color: #cbd3f2; font-size: 0.95rem; line-height: 1.6;">
+                                Participated in advanced Capture The Flag competition focusing on real-world cybersecurity 
+                                challenges including web exploitation, cryptography, reverse engineering, and forensics.
+                            </p>
+                            <div class="mt-3">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Web Exploitation</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Cryptography</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Forensics</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Reverse Engineering</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTF Competition Card 2 -->
+                    <div class="col-md-6">
+                        <div class="competition-card glass-dark rounded-3 p-4 h-100 glass-hover">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="competition-icon me-3">
+                                    <i class="fas fa-flag" style="font-size: 2rem; color: #e74c3c;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h3 class="h5 mb-2" style="color: #cba6f7;">CyberSec 6.0</h3>
+                                    <p class="mb-2" style="color: #cbd3f2; font-size: 0.9rem;">
+                                        <i class="fas fa-shield-alt me-2"></i>CTF Competition
+                                    </p>
+                                    <span class="competition-tag badge rounded-pill px-3 py-2 mb-3">Cybersecurity</span>
+                                </div>
+                            </div>
+                            <p style="color: #cbd3f2; font-size: 0.95rem; line-height: 1.6;">
+                                Advanced cybersecurity competition building upon previous experience. Tackled more complex 
+                                security scenarios, including advanced persistent threats and modern attack vectors.
+                            </p>
+                            <div class="mt-3">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Advanced Threats</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Network Security</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Malware Analysis</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Incident Response</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTF Competition Card 3 -->
+                    <div class="col-md-6">
+                        <div class="competition-card glass-dark rounded-3 p-4 h-100 glass-hover">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="competition-icon me-3">
+                                    <i class="fas fa-bug" style="font-size: 2rem; color: #f39c12;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h3 class="h5 mb-2" style="color: #cba6f7;">Lag and Crash</h3>
+                                    <p class="mb-2" style="color: #cbd3f2; font-size: 0.9rem;">
+                                        <i class="fas fa-shield-alt me-2"></i>CTF Competition
+                                    </p>
+                                    <span class="competition-tag badge rounded-pill px-3 py-2 mb-3">Cybersecurity</span>
+                                </div>
+                            </div>
+                            <p style="color: #cbd3f2; font-size: 0.95rem; line-height: 1.6;">
+                                Specialized CTF competition focused on system vulnerabilities, performance exploitation, 
+                                and crash analysis. Gained experience in debugging and identifying system weaknesses.
+                            </p>
+                            <div class="mt-3">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">System Analysis</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Debugging</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Performance Testing</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Vulnerability Assessment</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coding Competition Card 1 -->
+                    <div class="col-md-6">
+                        <div class="competition-card glass-dark rounded-3 p-4 h-100 glass-hover">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="competition-icon me-3">
+                                    <i class="fas fa-code" style="font-size: 2rem; color: #3498db;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h3 class="h5 mb-2" style="color: #cba6f7;">Perse School Team Challenge 2023</h3>
+                                    <p class="mb-2" style="color: #cbd3f2; font-size: 0.9rem;">
+                                        <i class="fas fa-users me-2"></i>Coding Competition
+                                    </p>
+                                    <span class="competition-tag badge rounded-pill px-3 py-2 mb-3">Programming</span>
+                                </div>
+                            </div>
+                            <p style="color: #cbd3f2; font-size: 0.95rem; line-height: 1.6;">
+                                Collaborative programming challenge requiring teamwork, algorithm design, and rapid 
+                                problem-solving under time constraints. Developed solutions using multiple programming languages.
+                            </p>
+                            <div class="mt-3">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Team Collaboration</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Algorithm Design</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Problem Solving</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Time Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coding Competition Card 2 -->
+                    <div class="col-md-6">
+                        <div class="competition-card glass-dark rounded-3 p-4 h-100 glass-hover">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="competition-icon me-3">
+                                    <i class="fas fa-code" style="font-size: 2rem; color: #3498db;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h3 class="h5 mb-2" style="color: #cba6f7;">Perse School Team Challenge 2024</h3>
+                                    <p class="mb-2" style="color: #cbd3f2; font-size: 0.9rem;">
+                                        <i class="fas fa-users me-2"></i>Coding Competition
+                                    </p>
+                                    <span class="competition-tag badge rounded-pill px-3 py-2 mb-3">Programming</span>
+                                </div>
+                            </div>
+                            <p style="color: #cbd3f2; font-size: 0.95rem; line-height: 1.6;">
+                                Returned with enhanced skills and experience from the previous year. Tackled more advanced 
+                                programming challenges with improved efficiency and better team coordination strategies.
+                            </p>
+                            <div class="mt-3">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Advanced Programming</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Leadership</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Strategic Thinking</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Code Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research Competition Card -->
+                    <div class="col-md-6">
+                        <div class="competition-card glass-dark rounded-3 p-4 h-100 glass-hover">
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="competition-icon me-3">
+                                    <i class="fas fa-flask" style="font-size: 2rem; color: #90a4ae;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h3 class="h5 mb-2" style="color: #cba6f7;">ISS Research Project</h3>
+                                    <p class="mb-2" style="color: #cbd3f2; font-size: 0.9rem;">
+                                        <i class="fas fa-microscope me-2"></i>Science Research
+                                    </p>
+                                    <span class="competition-tag badge rounded-pill px-3 py-2 mb-3">Research</span>
+                                </div>
+                            </div>
+                            <p style="color: #cbd3f2; font-size: 0.95rem; line-height: 1.6;">
+                                Conducted comprehensive research on salt concentration effects on buoyant force. 
+                                Demonstrated scientific methodology, data analysis, and presentation skills applicable to technical research.
+                            </p>
+                            <div class="mt-3">
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Scientific Method</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Data Analysis</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Research Documentation</span>
+                                    <span class="skill-tag badge rounded-pill px-2 py-1">Presentation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Community Service Section -->
+    <div class="container-fluid py-4" id="service">
+        <div class="container">
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <h1 class="section-title text-center mb-2">Community Service</h1>
+                <p class="section-subtitle text-center mb-5">Giving back to the community through technology and education</p>
+                
+                <div class="row g-4">
+                    <!-- Service Card 1 -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="service-card glass-dark rounded-3 p-4 h-100 glass-hover">
+                            <div class="text-center mb-3">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-seedling" style="font-size: 3rem; color: #81c784;"></i>
+                                </div>
+                                <h3 class="h5 mb-2" style="color: #cba6f7;">Tiong Bahru Park Cleanup</h3>
+                                <p class="mb-2" style="color: #cbd3f2; font-size: 0.9rem;">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Tiong Bahru Park, Singapore
+                                </p>
+                                <span class="service-tag badge rounded-pill px-3 py-2 mb-3">2024</span>
+                            </div>
+                            <p style="color: #cbd3f2; font-size: 0.95rem; line-height: 1.6; text-align: center;">
+                                Volunteered in community-organized environmental cleanup initiative at Tiong Bahru Park. 
+                                Contributed to preserving local green spaces and promoting environmental awareness within the community.
+                            </p>
+                            <div class="text-center mt-3">
+                                <div class="d-flex flex-wrap gap-2 justify-content-center">
+                                    <span class="impact-tag badge rounded-pill px-2 py-1">Environmental Care</span>
+                                    <span class="impact-tag badge rounded-pill px-2 py-1">Community Action</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="col-lg-6 col-md-6">
+                        <div class="service-card glass-dark rounded-3 p-4 h-100 glass-hover">
+                            <div class="text-center mb-3">
+                                <div class="service-icon mb-3">
+                                    <i class="fas fa-water" style="font-size: 3rem; color: #64b5f6;"></i>
+                                </div>
+                                <h3 class="h5 mb-2" style="color: #cba6f7;">Changi Beach Cleanup</h3>
+                                <p class="mb-2" style="color: #cbd3f2; font-size: 0.9rem;">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Changi Beach, Singapore
+                                </p>
+                                <span class="service-tag badge rounded-pill px-3 py-2 mb-3">2023</span>
+                            </div>
+                            <p style="color: #cbd3f2; font-size: 0.95rem; line-height: 1.6; text-align: center;">
+                                Participated in coastal conservation efforts at Changi Beach, removing marine debris and 
+                                protecting Singapore's coastal ecosystem. Helped raise awareness about marine pollution and its impact.
+                            </p>
+                            <div class="text-center mt-3">
+                                <div class="d-flex flex-wrap gap-2 justify-content-center">
+                                    <span class="impact-tag badge rounded-pill px-2 py-1">Marine Conservation</span>
+                                    <span class="impact-tag badge rounded-pill px-2 py-1">Coastal Protection</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container-fluid py-4" id="contact">
+        <div class="container">
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <h1 class="section-title text-center mb-2">Let's Connect</h1>
+                <p class="section-subtitle text-center mb-5">Ready to collaborate or just want to say hello?</p>
+                
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="glass-dark rounded-3 p-4 p-md-5 text-center">
+                            <h3 class="h4 mb-4" style="color: #cba6f7;">Get In Touch</h3>
+                            <p class="mb-4" style="color: #cbd3f2; font-size: 1.1rem; line-height: 1.7;">
+                                I'm always open to discussing new opportunities, collaborating on exciting projects, 
+                                or simply connecting with fellow tech enthusiasts. Feel free to reach out!
+                            </p>
+                            
+                            <div class="row g-3 justify-content-center mb-4">
+                                <div class="col-md-4">
+                                    <a href="https://www.linkedin.com/in/yikaitan/" 
+                                        class="contact-link glass p-3 rounded-3 d-flex align-items-center text-decoration-none glass-hover h-100">
+                                        <i class="fab fa-linkedin" style="font-size: 1.5rem; color: #0077b5; margin-right: 15px;"></i>
+                                        <div class="text-start">
+                                            <h5 class="mb-1" style="color: #cbd3f2; font-size: 1rem;">LinkedIn</h5>
+                                            <p class="mb-0" style="color: #cbd3f2; font-size: 0.85rem;">Professional networking</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="https://github.com/Yikai-Tan" 
+                                        class="contact-link glass p-3 rounded-3 d-flex align-items-center text-decoration-none glass-hover h-100">
+                                        <i class="fab fa-github" style="font-size: 1.5rem; color: #cbd3f2; margin-right: 15px;"></i>
+                                        <div class="text-start">
+                                            <h5 class="mb-1" style="color: #cbd3f2; font-size: 1rem;">GitHub</h5>
+                                            <p class="mb-0" style="color: #cbd3f2; font-size: 0.85rem;">View my projects</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="mailto:yikai_tan@outlook.com" 
+                                        class="contact-link glass p-3 rounded-3 d-flex align-items-center text-decoration-none glass-hover h-100">
+                                        <i class="fas fa-envelope" style="font-size: 1.5rem; color: #ea4335; margin-right: 15px;"></i>
+                                        <div class="text-start">
+                                            <h5 class="mb-1" style="color: #cbd3f2; font-size: 1rem;">Email</h5>
+                                            <p class="mb-0" style="color: #cbd3f2; font-size: 0.85rem;">Direct communication</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid py-4">
+        <div class="container">
+            <div class="footer-dock glass rounded-5 p-4">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="footer-info">
+                            <p class="footer-name mb-1">Yi Kai Tan</p>
+                            <p class="footer-tagline mb-2">Cybersecurity Student • Developer • Innovator</p>
+                            <p class="footer-email mb-0">
+                                <i class="fas fa-envelope me-2"></i>
+                                <a href="mailto:yikai_tan@outlook.com" class="email-link">yikai_tan@outlook.com</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="footer-social-dock">
+                            <a href="https://www.linkedin.com/in/yikaitan/" 
+                                class="social-dock-item" 
+                                aria-label="LinkedIn">
+                                <div class="social-icon-bg linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <span class="social-label">LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/Yikai-Tan" 
+                                class="social-dock-item" 
+                                aria-label="GitHub">
+                                <div class="social-icon-bg github">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <span class="social-label">GitHub</span>
+                            </a>
+                            <a href="mailto:yikai_tan@outlook.com" 
+                                class="social-dock-item" 
+                                aria-label="Email">
+                                <div class="social-icon-bg email">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <span class="social-label">Email</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom mt-4 pt-3">
+                    <div class="text-center">
+                        <p class="footer-copyright mb-2">© 2025 Yi Kai Tan. Built with passion and dedication.</p>
+                        <p class="footer-tech mb-0">
+                            Designed with modern web technologies • Cybersecurity • Development • Innovation
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- JavaScript for navbar functionality -->
 <script src="./JS/navbar.js"></script>
 </body>

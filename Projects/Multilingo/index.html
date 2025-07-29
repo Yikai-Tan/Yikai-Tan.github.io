@@ -9,14 +9,106 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../../CSS/style.css">
+    
+    <!-- Floating particles background -->
+    <style>
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(203, 166, 247, 0.3);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+        }
+        
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 6s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 8s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 10s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 12s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 14s; }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-10vh) rotate(180deg);
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Floating particles background -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Project Navigation Bar -->
+    <div class="progress-bar-container">
+        <div class="progress-bar-track">
+            <div class="progress-indicator" data-section="home">
+                <a href="../../index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-home"></i>
+                    <span class="progress-label">Home</span>
+                </a>
+            </div>
+            <div class="progress-indicator" data-section="portfolio2">
+                <a href="../Portfolio2/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-rocket"></i>
+                    <span class="progress-label">Portfolio 2.0</span>
+                </a>
+            </div>
+            <div class="progress-indicator" data-section="portfolio1">
+                <a href="../Portfolio/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-laptop-code"></i>
+                    <span class="progress-label">Portfolio 1.0</span>
+                </a>
+            </div>
+            <div class="progress-indicator active" data-section="multilingo">
+                <a href="../Multilingo/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-language"></i>
+                    <span class="progress-label">MultiLingo</span>
+                </a>
+            </div>
+            <div class="progress-indicator" data-section="iss">
+                <a href="../IssResearchProject/index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-flask"></i>
+                    <span class="progress-label">ISS Research</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Navigation Bar -->
     <nav class="glass-navbar" id="glassNavbar">
         <button class="hamburger-btn" id="hamburgerBtn">
@@ -27,13 +119,44 @@
         
         <div class="nav-menu" id="navMenu">
             <div class="nav-item">
-                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="../../index.html" class="nav-link">
+                    <i class="fas fa-home me-2"></i>Home
+                </a>
             </div>
             <div class="nav-item">
-                <a href="../../index.html#certifications" class="nav-link">Certifications</a>
+                <a href="../../index.html#about" class="nav-link">
+                    <i class="fas fa-user me-2"></i>About
+                </a>
             </div>
             <div class="nav-item">
-                <a href="../../index.html#projects" class="nav-link">Projects</a>
+                <a href="../../index.html#education" class="nav-link">
+                    <i class="fas fa-graduation-cap me-2"></i>Education
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#certifications" class="nav-link">
+                    <i class="fas fa-certificate me-2"></i>Certifications
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#projects" class="nav-link">
+                    <i class="fas fa-code me-2"></i>Projects
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#competitions" class="nav-link">
+                    <i class="fas fa-trophy me-2"></i>Competitions
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#service" class="nav-link">
+                    <i class="fas fa-heart me-2"></i>Community
+                </a>
+            </div>
+            <div class="nav-item">
+                <a href="../../index.html#contact" class="nav-link">
+                    <i class="fas fa-envelope me-2"></i>Contact
+                </a>
             </div>
         </div>
     </nav>
@@ -41,62 +164,168 @@
     <!-- Project Content -->
     <div class="container-fluid hero-section" style="min-height: auto; padding-top: 60px;">
         <div class="container">
+            <!-- Back Button -->
+            <div class="mb-4">
+                <a href="../../index.html#projects" class="glass p-3 rounded-3 text-decoration-none d-inline-flex align-items-center glass-hover" style="color: #cba6f7;">
+                    <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                </a>
+            </div>
+
             <!-- Project Header -->
-            <div class="glass rounded-4 p-4 p-md-5 mb-5 glass-hover">
-                <h1 class="section-title text-center mb-2">MultiLingo</h1>
-                <p class="section-subtitle text-center mb-4">Breaking Language Barriers with AI</p>
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <div class="text-center mb-4">
+                    <div class="project-category mb-3">
+                        <span class="badge rounded-pill px-3 py-2" style="background: rgba(76, 175, 80, 0.2); color: #4caf50;">
+                            <i class="fas fa-brain me-2"></i>AI & Machine Learning
+                        </span>
+                    </div>
+                    <h1 class="section-title mb-3">MultiLingo</h1>
+                    <p class="section-subtitle mb-4">Breaking Language Barriers with AI</p>
+                </div>
                 
                 <div class="row align-items-center">
                     <div class="col-md-6 mb-4 mb-md-0">
-                        <img src="../projectPictures/Multilingo/MultilingoOneSlide.jpeg" alt="MultiLingo Project" class="img-fluid rounded-3" style="width: 100%; height: auto;">
+                        <div class="project-image-container rounded-3 overflow-hidden">
+                            <img src="../projectPictures/Multilingo/MultilingoOneSlide.jpeg" 
+                                alt="MultiLingo Application Interface" 
+                                class="img-fluid w-100" 
+                                style="aspect-ratio: 16/9; object-fit: cover;">
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <h3 class="project-title mb-3">Project Context</h3>
-                        <p class="project-description mb-4">MultiLingo strives to break the language barriers that we have today between people. Using the industry's most trusted and pioneer model from Open AI, Chat GPT 3.5, we made an application that translates language to language and teaches users simple phrases to simplify the travelling process.</p>
-                        
-                        <div class="d-flex flex-wrap gap-2 mb-4">
-                            <span class="project-tag badge rounded-pill px-3 py-2">Python</span>
-                            <span class="project-tag badge rounded-pill px-3 py-2">OpenAI GPT-3.5</span>
-                            <span class="project-tag badge rounded-pill px-3 py-2">Streamlit</span>
-                            <span class="project-tag badge rounded-pill px-3 py-2">Natural Language Processing</span>
-                        </div>
-                        
-                        <div class="d-flex gap-3">
-                            <a href="https://sites.google.com/sst.edu.sg/cp-coursework-gallery/2024/multilingo" target="_blank" class="tech-tag badge rounded-pill px-3 py-2 text-decoration-none">
-                                <i class="fas fa-external-link-alt me-2"></i>Find Out More
-                            </a>
-                            <a href="https://github.com/Tophat-Guy99/MultiLingo" target="_blank" class="tech-tag badge rounded-pill px-3 py-2 text-decoration-none">
-                                <i class="fab fa-github me-2"></i>GitHub
-                            </a>
+                        <div class="glass-dark rounded-3 p-4">
+                            <h3 class="h4 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-globe me-2"></i>Project Vision
+                            </h3>
+                            <p class="mb-4" style="color: #cbd3f2; font-size: 1.1rem; line-height: 1.6;">
+                                MultiLingo strives to break the language barriers that exist between people today. 
+                                Using OpenAI's trusted GPT-3.5 model, we created an application that not only translates 
+                                between languages but also teaches users essential phrases to simplify the traveling process.
+                            </p>
+                            
+                            <h3 class="h5 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-rocket me-2"></i>Key Features
+                            </h3>
+                            <ul style="list-style: none; padding-left: 0; color: #cbd3f2;">
+                                <li class="mb-2">
+                                    <i class="fas fa-language me-2" style="color: #cba6f7;"></i>
+                                    Real-time language translation
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-graduation-cap me-2" style="color: #cba6f7;"></i>
+                                    Interactive phrase learning
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-plane me-2" style="color: #cba6f7;"></i>
+                                    Travel-focused vocabulary
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-mobile-alt me-2" style="color: #cba6f7;"></i>
+                                    User-friendly interface
+                                </li>
+                            </ul>
+                            
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="project-tag badge rounded-pill px-3 py-2">Python</span>
+                                <span class="project-tag badge rounded-pill px-3 py-2">OpenAI GPT-3.5</span>
+                                <span class="project-tag badge rounded-pill px-3 py-2">Streamlit</span>
+                                <span class="project-tag badge rounded-pill px-3 py-2">NLP</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Reflection -->
-            <div class="glass rounded-4 p-4 p-md-5 mb-5 glass-hover">
+            <!-- Development Journey & Learning -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
                 <div class="row align-items-center">
                     <div class="col-md-6 order-md-2 mb-4 mb-md-0">
-                        <img src="../projectPictures/Multilingo/MultilingoMainPhoto.JPG" alt="Project Development" class="img-fluid rounded-3" style="width: 100%; height: auto;">
+                        <div class="project-image-container rounded-3 overflow-hidden">
+                            <img src="../projectPictures/Multilingo/MultilingoMainPhoto.JPG" 
+                                alt="Project Development Process" 
+                                class="img-fluid w-100" 
+                                style="aspect-ratio: 16/10; object-fit: cover;">
+                        </div>
                     </div>
                     <div class="col-md-6 order-md-1">
-                        <h3 class="project-title mb-3">Reflection</h3>
-                        <p class="project-description mb-4">From this project, I learned how to tap into Large Language Models (LLMs) and harness their strengths in language processing. In this process, I also learned how to create a bash file for users to install the required libraries for the application to run. My group and I encountered various issues during the project, such as the LLM generating gibberish or incorrect outputs. However, we persevered through this hardship, refining our code and prompts to achieve the desired results. This project strengthened the bonds between my group mates and me.</p>
-                        
-                        <h4 class="project-title mb-3" style="font-size: 1.3rem;">Key Learning Points</h4>
-                        <ul class="project-description" style="list-style: none; padding-left: 0;">
-                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>How to tap into AI models with Python</li>
-                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>How to use Streamlit to make an interface</li>
-                            <li class="mb-2"><i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>How to write a bash file</li>
-                        </ul>
+                        <div class="glass-dark rounded-3 p-4">
+                            <h3 class="h4 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-cogs me-2"></i>Development Journey
+                            </h3>
+                            <p class="mb-4" style="color: #cbd3f2; line-height: 1.6;">
+                                Through this project, I learned how to harness the power of Large Language Models (LLMs) and 
+                                integrate them effectively into practical applications. The development process involved creating 
+                                automated setup scripts and overcoming challenges with model output consistency.
+                            </p>
+                            
+                            <h3 class="h5 mb-3" style="color: #cba6f7;">
+                                <i class="fas fa-puzzle-piece me-2"></i>Challenges & Solutions
+                            </h3>
+                            <p class="mb-4" style="color: #cbd3f2; line-height: 1.6;">
+                                Our team encountered various technical challenges, including inconsistent AI outputs and deployment 
+                                complexities. Through persistent debugging, prompt refinement, and collaborative problem-solving, 
+                                we successfully delivered a robust and user-friendly application.
+                            </p>
+                            
+                            <h4 class="h6 mb-3" style="color: #cba6f7;">Technical Skills Acquired</h4>
+                            <ul style="list-style: none; padding-left: 0; color: #cbd3f2;">
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    AI model integration with Python APIs
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Streamlit framework for rapid prototyping
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Bash scripting for automated installation
+                                </li>
+                                <li class="mb-2">
+                                    <i class="fas fa-check-circle me-2" style="color: #cba6f7;"></i>
+                                    Team collaboration and project management
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Resources -->
+            <div class="glass rounded-4 p-4 p-md-5 mb-4 glass-hover">
+                <h3 class="h4 text-center mb-4" style="color: #cba6f7;">
+                    <i class="fas fa-folder-open me-2"></i>Project Resources
+                </h3>
+                <div class="row g-3 justify-content-center">
+                    <div class="col-md-6">
+                        <a href="https://sites.google.com/sst.edu.sg/cp-coursework-gallery/2024/multilingo" 
+                           target="_blank" 
+                           class="glass-dark p-4 rounded-3 text-decoration-none d-block glass-hover">
+                            <div class="text-center">
+                                <i class="fas fa-globe" style="font-size: 2rem; color: #cba6f7; margin-bottom: 15px;"></i>
+                                <h5 style="color: #cbd3f2;">Project Gallery</h5>
+                                <p style="color: #cbd3f2; font-size: 0.9rem;">Complete project showcase and details</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="https://github.com/Tophat-Guy99/MultiLingo" 
+                           target="_blank" 
+                           class="glass-dark p-4 rounded-3 text-decoration-none d-block glass-hover">
+                            <div class="text-center">
+                                <i class="fab fa-github" style="font-size: 2rem; color: #cba6f7; margin-bottom: 15px;"></i>
+                                <h5 style="color: #cbd3f2;">Source Code</h5>
+                                <p style="color: #cbd3f2; font-size: 0.9rem;">Full implementation and documentation</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <!-- Back to Projects Button -->
             <div class="text-center mb-5">
-                <a href="../../index.html#projects" class="tech-tag badge rounded-pill px-4 py-3 text-decoration-none" style="font-size: 1rem;">
-                    <i class="fas fa-arrow-left me-2"></i>Back to Projects
+                <a href="../../index.html#projects" class="glass p-3 rounded-3 text-decoration-none d-inline-flex align-items-center glass-hover" style="color: #cba6f7; font-size: 1.1rem;">
+                    <i class="fas fa-arrow-left me-2"></i>Explore More Projects
                 </a>
             </div>
         </div>

@@ -170,14 +170,14 @@ body {
     transform: translateY(0);
 }
 
-.nav-menu.active .nav-item:nth-child(1) { transition-delay: 0.1s; }
-.nav-menu.active .nav-item:nth-child(2) { transition-delay: 0.2s; }
-.nav-menu.active .nav-item:nth-child(3) { transition-delay: 0.3s; }
-.nav-menu.active .nav-item:nth-child(4) { transition-delay: 0.4s; }
-.nav-menu.active .nav-item:nth-child(5) { transition-delay: 0.5s; }
-.nav-menu.active .nav-item:nth-child(6) { transition-delay: 0.6s; }
-.nav-menu.active .nav-item:nth-child(7) { transition-delay: 0.7s; }
-.nav-menu.active .nav-item:nth-child(8) { transition-delay: 0.8s; }
+.nav-menu.active .nav-item:nth-child(1) { transition-delay: 0.05s; }
+.nav-menu.active .nav-item:nth-child(2) { transition-delay: 0.1s; }
+.nav-menu.active .nav-item:nth-child(3) { transition-delay: 0.15s; }
+.nav-menu.active .nav-item:nth-child(4) { transition-delay: 0.2s; }
+.nav-menu.active .nav-item:nth-child(5) { transition-delay: 0.25s; }
+.nav-menu.active .nav-item:nth-child(6) { transition-delay: 0.3s; }
+.nav-menu.active .nav-item:nth-child(7) { transition-delay: 0.35s; }
+.nav-menu.active .nav-item:nth-child(8) { transition-delay: 0.4s; }
 
 .nav-menu:not(.active) .nav-item:nth-child(8) { transition-delay: 0s; }
 .nav-menu:not(.active) .nav-item:nth-child(7) { transition-delay: 0.1s; }

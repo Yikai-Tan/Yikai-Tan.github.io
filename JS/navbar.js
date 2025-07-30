@@ -208,3 +208,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Main Navigation Preview Bar Functionality (for project pages)
+document.addEventListener('DOMContentLoaded', function() {
+    const homeIndicator = document.querySelector('.progress-indicator[data-section="home"]');
+    const mainNavPreviewBar = document.querySelector('.main-nav-preview-bar');
+    let mainNavTimeout;
+
+    if (homeIndicator && mainNavPreviewBar) {
+        // Show main nav preview bar when hovering over home indicator
+        homeIndicator.addEventListener('mouseenter', function() {
+            clearTimeout(mainNavTimeout);
+            mainNavPreviewBar.classList.add('show');
+        });
+
+        // Keep main nav preview bar visible when hovering over it
+        mainNavPreviewBar.addEventListener('mouseenter', function() {
+            clearTimeout(mainNavTimeout);
+            mainNavPreviewBar.classList.add('show');
+        });
+
+        // Hide main nav preview bar when leaving home indicator (with delay)
+        homeIndicator.addEventListener('mouseleave', function() {
+            mainNavTimeout = setTimeout(function() {
+                mainNavPreviewBar.classList.remove('show');
+            }, 300); // 300ms delay to allow moving to preview bar
+        });
+
+        // Hide main nav preview bar when leaving preview bar
+        mainNavPreviewBar.addEventListener('mouseleave', function() {
+            mainNavTimeout = setTimeout(function() {
+                mainNavPreviewBar.classList.remove('show');
+            }, 100); // Shorter delay when leaving preview bar
+        });
+    }
+});

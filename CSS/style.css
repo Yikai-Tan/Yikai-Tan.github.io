@@ -370,6 +370,7 @@ body {
     font-weight: 500;
 }
 
+/* ===== PROJECT CARDS ===== */
 .project-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(40px);
@@ -383,9 +384,9 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-8px) scale(1.02);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 
-        0 16px 48px rgba(0, 0, 0, 0.15),
+        0 20px 60px rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.12),
         inset 0 -1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -393,7 +394,6 @@ body {
 .project-image-container {
     position: relative;
     overflow: hidden;
-
 }
 
 .project-image {
@@ -404,7 +404,7 @@ body {
 }
 
 .project-card:hover .project-image {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .project-overlay {
@@ -413,7 +413,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -424,10 +424,69 @@ body {
 .project-overlay i {
     color: white;
     font-size: 2rem;
+    transition: transform 0.3s ease;
 }
 
 .project-card:hover .project-overlay {
     opacity: 1;
+}
+
+.project-card:hover .project-overlay i {
+    transform: scale(1.2);
+}
+
+.project-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/* Button Styles for Project Overlays */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin: 0.25rem;
+    text-align: center;
+    justify-content: center;
+    min-width: 110px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-outline {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
 }
 
 .project-header {
@@ -476,6 +535,15 @@ body {
     color: #cbd3f2;
     font-size: 0.8rem;
     font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.project-tag:hover {
+    transform: translateY(-1px);
+}
+
+.project-tech {
+    margin-bottom: 1.5rem !important;
 }
 
 .project-stats {

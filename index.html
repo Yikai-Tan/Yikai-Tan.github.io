@@ -550,189 +550,214 @@
                 
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-4">
-                        <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover">
-                            <a href="./Projects/Portfolio2/index.html" class="text-decoration-none">
-                                <div class="project-image-container">
-                                    <img src="./Projects/projectPictures/PortfolioV2/PortfolioV2CoverPicture.png" 
-                                        class="project-image" 
-                                        alt="Portfolio 2.0 Website">
-                                    <div class="project-overlay">
-                                        <i class="fas fa-external-link-alt"></i>
+                        <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover" onclick="window.location.href='./Projects/Portfolio2/index.html'" style="cursor: pointer;">
+                            <div class="project-image-container">
+                                <img src="./Projects/projectPictures/PortfolioV2/PortfolioV2CoverPicture.png" 
+                                    class="project-image" 
+                                    alt="Portfolio 2.0 Website">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <a href="./Projects/Portfolio2/index.html" class="btn btn-primary" onclick="event.stopPropagation();">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Details
+                                        </a>
+                                        <a href="https://github.com/Yikai-Tan/yikai-tan.github.io" class="btn btn-outline" onclick="event.stopPropagation();">
+                                            <i class="fab fa-github me-2"></i>GitHub
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="card-body p-4">
-                                    <div class="project-header mb-3">
-                                        <h2 class="project-title h5 mb-2">Portfolio 2.0</h2>
-                                        <span class="project-status badge rounded-pill px-2 py-1" style="background: rgba(156, 39, 176, 0.2); color: #9c27b0;">Current</span>
-                                    </div>
-                                    <p class="project-description mb-3">Advanced portfolio with glass morphism design, interactive elements, and modern web technologies. A complete evolution from the foundation.</p>
-                                    <div class="project-tech mb-3">
-                                        <h6 class="tech-title">Technologies:</h6>
-                                        <div class="d-flex flex-wrap gap-2">
-                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
-                                                    alt="HTML" width="16" height="16">
-                                                HTML5
-                                            </span>
-                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
-                                                    alt="CSS" width="16" height="16">
-                                                CSS3
-                                            </span>
-                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
-                                                    alt="JavaScript" width="16" height="16">
-                                                JavaScript
-                                            </span>
-                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" 
-                                                    alt="Bootstrap" width="16" height="16">
-                                                Bootstrap
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="project-stats">
-                                        <div class="d-flex justify-content-between text-muted">
-                                            <small><i class="fas fa-calendar me-1"></i>2025</small>
-                                            <small><i class="fas fa-rocket me-1"></i>Advanced Web</small>
-                                        </div>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="project-header mb-3">
+                                    <h2 class="project-title h5 mb-2">Portfolio 2.0</h2>
+                                    <span class="project-status badge rounded-pill px-2 py-1" style="background: rgba(156, 39, 176, 0.2); color: #9c27b0;">Current</span>
+                                </div>
+                                <p class="project-description mb-3">Advanced portfolio with glass morphism design, interactive elements, and modern web technologies. A complete evolution from the foundation.</p>
+                                <div class="project-tech mb-3">
+                                    <h6 class="tech-title">Technologies:</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
+                                                alt="HTML" width="16" height="16">
+                                            HTML5
+                                        </span>
+                                        <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
+                                                alt="CSS" width="16" height="16">
+                                            CSS3
+                                        </span>
+                                        <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" 
+                                                alt="JavaScript" width="16" height="16">
+                                            JavaScript
+                                        </span>
+                                        <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" 
+                                                alt="Bootstrap" width="16" height="16">
+                                            Bootstrap
+                                        </span>
                                     </div>
                                 </div>
-                            </a>
+                                <div class="project-stats">
+                                    <div class="d-flex justify-content-between text-muted">
+                                        <small><i class="fas fa-calendar me-1"></i>2025</small>
+                                        <small><i class="fas fa-rocket me-1"></i>Advanced Web</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
-                        <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover">
-                            <a href="./Projects/Portfolio/index.html" class="text-decoration-none">
-                                <div class="project-image-container">
-                                    <img src="./Projects/projectPictures/PortfolioV1/PortfolioV1Main.png" 
-                                        class="project-image" 
-                                        alt="Portfolio Website">
-                                    <div class="project-overlay">
-                                        <i class="fas fa-external-link-alt"></i>
+                        <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover" onclick="window.location.href='./Projects/Portfolio/index.html'" style="cursor: pointer;">
+                            <div class="project-image-container">
+                                <img src="./Projects/projectPictures/PortfolioV1/PortfolioV1Main.png" 
+                                    class="project-image" 
+                                    alt="Portfolio Website">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <a href="./Projects/Portfolio/index.html" class="btn btn-primary" onclick="event.stopPropagation();">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Details
+                                        </a>
+                                        <a href="https://github.com/Yikai-Tan/yikai-tan.github.io" class="btn btn-outline" onclick="event.stopPropagation();">
+                                            <i class="fab fa-github me-2"></i>GitHub
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="card-body p-4">
-                                    <div class="project-header mb-3">
-                                        <h2 class="project-title h5 mb-2">Portfolio 1.0</h2>
-                                        <span class="project-status badge rounded-pill px-2 py-1">Completed</span>
-                                    </div>
-                                    <p class="project-description mb-3">My journey on creating a portfolio from scratch and learning HTML, CSS. A foundational project that sparked my passion for web development.</p>
-                                    <div class="project-tech mb-3">
-                                        <h6 class="tech-title">Technologies:</h6>
-                                        <div class="d-flex flex-wrap gap-2">
-                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
-                                                    alt="HTML" width="16" height="16">
-                                                HTML
-                                            </span>
-                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
-                                                    alt="CSS" width="16" height="16">
-                                                CSS
-                                            </span>
-                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
-                                                    alt="GitHub" width="16" height="16">
-                                                GitHub
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="project-stats">
-                                        <div class="d-flex justify-content-between text-muted">
-                                            <small><i class="fas fa-calendar me-1"></i>2023</small>
-                                            <small><i class="fas fa-code me-1"></i>Web Development</small>
-                                        </div>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="project-header mb-3">
+                                    <h2 class="project-title h5 mb-2">Portfolio 1.0</h2>
+                                    <span class="project-status badge rounded-pill px-2 py-1">Completed</span>
+                                </div>
+                                <p class="project-description mb-3">My journey on creating a portfolio from scratch and learning HTML, CSS. A foundational project that sparked my passion for web development.</p>
+                                <div class="project-tech mb-3">
+                                    <h6 class="tech-title">Technologies:</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" 
+                                                alt="HTML" width="16" height="16">
+                                            HTML
+                                        </span>
+                                        <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
+                                                alt="CSS" width="16" height="16">
+                                            CSS
+                                        </span>
+                                        <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" 
+                                                alt="GitHub" width="16" height="16">
+                                            GitHub
+                                        </span>
+                                        <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1" style="opacity: 0; visibility: hidden;">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" 
+                                                alt="CSS" width="16" height="16">
+                                            if ur reading this, you are reading the source code of my portfolio
+                                        </span>
                                     </div>
                                 </div>
-                            </a>
+                                <div class="project-stats">
+                                    <div class="d-flex justify-content-between text-muted">
+                                        <small><i class="fas fa-calendar me-1"></i>2023</small>
+                                        <small><i class="fas fa-code me-1"></i>Web Development</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
-                        <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover">
-                            <a href="./Projects/Multilingo/index.html" class="text-decoration-none">
-                                <div class="project-image-container">
-                                    <img src="./Projects/projectPictures/Multilingo/MultilingoMainPhoto.JPG" 
-                                        class="project-image" 
-                                        alt="MultiLingo">
-                                    <div class="project-overlay">
-                                        <i class="fas fa-external-link-alt"></i>
+                        <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover" onclick="window.location.href='./Projects/Multilingo/index.html'" style="cursor: pointer;">
+                            <div class="project-image-container">
+                                <img src="./Projects/projectPictures/Multilingo/MultilingoMainPhoto.JPG" 
+                                    class="project-image" 
+                                    alt="MultiLingo">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <a href="./Projects/Multilingo/index.html" class="btn btn-primary" onclick="event.stopPropagation();">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Details
+                                        </a>
+                                        <a href="https://github.com/Tophat-Guy99/MultiLingo" class="btn btn-outline" onclick="event.stopPropagation();">
+                                            <i class="fab fa-github me-2"></i>GitHub
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="card-body p-4">
-                                    <div class="project-header mb-3">
-                                        <h2 class="project-title h5 mb-2">MultiLingo</h2>
-                                        <span class="project-status badge rounded-pill px-2 py-1" style="background: rgba(76, 175, 80, 0.2); color: #4caf50;">Featured</span>
-                                    </div>
-                                    <p class="project-description mb-3">Breaking language barriers. One language at a time. An AI-powered translation and language learning assistant built with modern technologies.</p>
-                                    <div class="project-tech mb-3">
-                                        <h6 class="tech-title">Technologies:</h6>
-                                        <div class="d-flex flex-wrap gap-2">
-                                            <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
-                                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
-                                                    alt="Python" width="16" height="16">
-                                                Python
-                                            </span>
-                                            <span class="project-tag badge rounded-pill px-3 py-2">
-                                                🦜 LangChain
-                                            </span>
-                                            <span class="project-tag badge rounded-pill px-3 py-2">
-                                                <i class="fas fa-brain me-1"></i>GPT 3.5
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="project-stats">
-                                        <div class="d-flex justify-content-between text-muted">
-                                            <small><i class="fas fa-calendar me-1"></i>2024</small>
-                                            <small><i class="fas fa-robot me-1"></i>AI/ML</small>
-                                        </div>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="project-header mb-3">
+                                    <h2 class="project-title h5 mb-2">MultiLingo</h2>
+                                    <span class="project-status badge rounded-pill px-2 py-1" style="background: rgba(76, 175, 80, 0.2); color: #4caf50;">Featured</span>
+                                </div>
+                                <p class="project-description mb-3">Breaking language barriers. One language at a time. An AI-powered translation and language learning assistant built with modern technologies.</p>
+                                <div class="project-tech mb-3">
+                                    <h6 class="tech-title">Technologies:</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="project-tag badge rounded-pill px-3 py-2 d-flex align-items-center gap-1">
+                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" 
+                                                alt="Python" width="16" height="16">
+                                            Python
+                                        </span>
+                                        <span class="project-tag badge rounded-pill px-3 py-2">
+                                            🦜 LangChain
+                                        </span>
+                                        <span class="project-tag badge rounded-pill px-3 py-2">
+                                            <i class="fas fa-brain me-1"></i>GPT 3.5
+                                        </span>
                                     </div>
                                 </div>
-                            </a>
+                                <div class="project-stats">
+                                    <div class="d-flex justify-content-between text-muted">
+                                        <small><i class="fas fa-calendar me-1"></i>2024</small>
+                                        <small><i class="fas fa-robot me-1"></i>AI/ML</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
-                        <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover">
-                            <a href="./Projects/IssResearchProject/index.html" class="text-decoration-none">
-                                <div class="project-image-container">
-                                    <img src="./Projects/projectPictures/IssResearchPictures/IssMainPhoto.JPG" 
-                                        class="project-image" 
-                                        alt="ISS Research Project">
-                                    <div class="project-overlay">
-                                        <i class="fas fa-external-link-alt"></i>
+                        <div class="project-card glass-dark rounded-3 overflow-hidden h-100 glass-hover" onclick="window.location.href='./Projects/IssResearchProject/index.html'" style="cursor: pointer;">
+                            <div class="project-image-container">
+                                <img src="./Projects/projectPictures/IssResearchPictures/IssMainPhoto.JPG" 
+                                    class="project-image" 
+                                    alt="ISS Research Project">
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <a href="./Projects/IssResearchProject/index.html" class="btn btn-primary" onclick="event.stopPropagation();">
+                                            <i class="fas fa-external-link-alt me-2"></i>View Details
+                                        </a>
+                                        <a href="https://docs.google.com/document/d/1kbJliOctIZkVEhGZLotnW5TCszzZYT7i/edit?tab=t.0" class="btn btn-outline" target="_blank" onclick="event.stopPropagation();">
+                                            <i class="fas fa-file-alt me-2"></i>Research Documentation
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="card-body p-4">
-                                    <div class="project-header mb-3">
-                                        <h2 class="project-title h5 mb-2">ISS Research Project</h2>
-                                        <span class="project-status badge rounded-pill px-2 py-1" style="background: rgba(255, 193, 7, 0.2); color: #ffc107;">Research</span>
-                                    </div>
-                                    <p class="project-description mb-3">Effect of salt concentration on buoyant force on a miniature ship. A comprehensive scientific research project demonstrating analytical skills.</p>
-                                    <div class="project-tech mb-3">
-                                        <h6 class="tech-title">Skills Applied:</h6>
-                                        <div class="d-flex flex-wrap gap-2">
-                                            <span class="project-tag badge rounded-pill px-3 py-2">
-                                                <i class="fas fa-microscope me-1"></i>Research
-                                            </span>
-                                            <span class="project-tag badge rounded-pill px-3 py-2">
-                                                <i class="fas fa-chart-bar me-1"></i>Data Analysis
-                                            </span>
-                                            <span class="project-tag badge rounded-pill px-3 py-2">
-                                                <i class="fas fa-flask me-1"></i>Science
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="project-stats">
-                                        <div class="d-flex justify-content-between text-muted">
-                                            <small><i class="fas fa-calendar me-1"></i>2023</small>
-                                            <small><i class="fas fa-flask me-1"></i>Research Project</small>
-                                        </div>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="project-header mb-3">
+                                    <h2 class="project-title h5 mb-2">ISS Research Project</h2>
+                                    <span class="project-status badge rounded-pill px-2 py-1" style="background: rgba(255, 193, 7, 0.2); color: #ffc107;">Research</span>
+                                </div>
+                                <p class="project-description mb-3">Effect of salt concentration on buoyant force on a miniature ship. A comprehensive scientific research project demonstrating analytical skills.</p>
+                                <div class="project-tech mb-3">
+                                    <h6 class="tech-title">Skills Applied:</h6>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <span class="project-tag badge rounded-pill px-3 py-2">
+                                            <i class="fas fa-microscope me-1"></i>Research
+                                        </span>
+                                        <span class="project-tag badge rounded-pill px-3 py-2">
+                                            <i class="fas fa-chart-bar me-1"></i>Data Analysis
+                                        </span>
+                                        <span class="project-tag badge rounded-pill px-3 py-2">
+                                            <i class="fas fa-flask me-1"></i>Science
+                                        </span>
                                     </div>
                                 </div>
-                            </a>
+                                <div class="project-stats">
+                                    <div class="d-flex justify-content-between text-muted">
+                                        <small><i class="fas fa-calendar me-1"></i>2023</small>
+                                        <small><i class="fas fa-flask me-1"></i>Research Project</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

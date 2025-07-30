@@ -1152,6 +1152,132 @@ footer {
     transform: translateY(-50%) translateX(5px);
 }
 
+/* Hide the old progress label when hovering over projects */
+.progress-indicator[data-section="projects"]:hover .progress-label {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Projects Progress Bar Preview */
+.projects-preview-bar {
+    position: absolute;
+    left: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    pointer-events: none;
+    z-index: 1002;
+}
+
+.projects-preview-title {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: #cba6f7;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 1004;
+}
+
+.progress-indicator[data-section="projects"]:hover .projects-preview-bar,
+.projects-preview-bar.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(10px);
+    pointer-events: all;
+}
+
+.progress-indicator[data-section="projects"]:hover .projects-preview-title,
+.projects-preview-bar.show .projects-preview-title {
+    opacity: 1;
+    visibility: visible;
+}
+
+.projects-preview-track {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border-radius: 25px;
+    padding: 15px 10px;
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.projects-preview-indicator {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.projects-preview-indicator:hover {
+    background: rgba(203, 166, 247, 0.15);
+    transform: scale(1.1);
+}
+
+.projects-preview-indicator.active {
+    background: rgba(203, 166, 247, 0.2);
+    box-shadow: 0 4px 15px rgba(203, 166, 247, 0.3);
+}
+
+.projects-preview-indicator i {
+    color: rgba(203, 211, 242, 0.7);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.projects-preview-indicator:hover i,
+.projects-preview-indicator.active i {
+    color: #cba6f7;
+}
+
+.projects-preview-label {
+    position: absolute;
+    left: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 1003;
+}
+
+.projects-preview-indicator:hover .projects-preview-label {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-50%) translateX(5px);
+}
+
 /* Hide progress bar on mobile */
 @media (max-width: 768px) {
     .progress-bar-container {
